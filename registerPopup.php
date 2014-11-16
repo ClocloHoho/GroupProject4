@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Eat in Cork</title>
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     </head>
 
