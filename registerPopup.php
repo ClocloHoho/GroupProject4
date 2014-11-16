@@ -13,14 +13,14 @@
    	<h2 class="title-xs">Join us for more utilities</h2>
    	
    	<form action="tools/register.php" method="post">
-   		<p class="title-form title-xs">Name</p>
-   		<input type="text" name="userName" class="input w100 mt10" placeholder="Name" onchange="registerFormCheckUsername()" maxlenght="5110">
-   		<p class="title-form title-xs">Email</p>
-   		<input type="email" name="email" class="input w100" placeholder="Email" maxlenght="256" onchange="registerFormCheckConfirmEmail()">
-   		<input type="email" name="emailConfirm" class="input w100 mt10" placeholder="Confirm Email" maxlenght="256" onchange="registerFormCheckConfirmEmail()">
-   		<p class="title-form title-xs">Password</p>
-   		<input type="password" name="password" class="input w100 mt10" placeholder="Password" onchange="registerFormCheckConfirmPassword()">
-   		<input type="password" name="passwordConfirm" class="input w100 mt10" placeholder="Confirm Password" onchange="registerFormCheckConfirmPassword()">
+   		<label for="registerFormUsername" class="registerFormLabel title-form title-xs">Name</label>
+   		<input type="text" name="userName" class="registerFormField input w100 mt10" placeholder="Name" onchange="registerFormCheckUsername()" maxlenght="5110">
+   		<label for="registerFormEmail" class="title-form title-xs registerFormLabel">Email</label>
+   		<input type="email" name="email" class="registerFormField input w100" placeholder="Email" maxlenght="256" onchange="registerFormCheckConfirmEmail()">
+   		<input type="email" name="emailConfirm" class="registerFormEmailConfirm input w100 mt10" placeholder="Confirm Email" maxlenght="256" onchange="registerFormCheckConfirmEmail()">
+   		<label for="registerFormPassword" class="registerFormLabel title-form title-xs">Password</label>
+   		<input type="password" name="password" class="registerFormField input w100 mt10" placeholder="Password" onchange="registerFormCheckConfirmPassword()">
+   		<input type="password" name="passwordConfirm" class="registerFormPasswordConfirm input w100 mt10" placeholder="Confirm Password" onchange="registerFormCheckConfirmPassword()">
    		<input type="submit" class="button w100" value="Continue">
    	</form>
    	<button type="button" class="button w100 mt15" onclick="hideRegisterPopup()">Cancel</button>
