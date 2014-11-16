@@ -21,7 +21,7 @@
 	if(!$connected){
     include("registerPopup.php");
 	}?>
-    <div id="actualPage">
+
     <?php
     include("header.php");
 
@@ -58,10 +58,10 @@
 				<div class="grid">    
     			<div id="logReg">
     				<div class="Reg">
-    					<button class="button block-right block">Register</button>
+    					<button class="registerButton button block-right block" onclick="showRegisterPopup()">Register</button>
     				</div>
     				<div class="LogIn">
-    					<button class="button block-left block">Log In</button>
+    					<button class="button block-left block" onclick="showLogin()">Log In</button>
     				</div>
     			</div>
     			</div>
