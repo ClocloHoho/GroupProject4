@@ -19,7 +19,7 @@
 	// handles database connection and checks if the user is connected
 	include("tools/init.php");
 	if(!$connected){
-    include("registerPopup.php");
+        include("registerPopup.php");
 	}?>
 
     <?php
