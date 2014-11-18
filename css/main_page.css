@@ -78,3 +78,132 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+
+.app{
+	background-color: #ecf0f1; 
+	overflow: hidden;
+}
+
+.app > .container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 1%;
+	padding-bottom: 180px;
+}
+
+.timeline{
+	position: absolute;
+	top: 120px;
+}
+
+.timeline::before{
+	content: " ";
+	display: block;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	border-left: 1px solid #dce0df;
+	width: 0px;
+}
+
+.timeline > .entry{
+	position: relative;
+	margin-left: 34px;
+	margin-right: 15px;
+	padding: 30px 0;
+	max-width: 500px;
+}
+
+.timeline > .entry .wrapper{
+	position: relative;
+}
+
+.timeline > .entry .wrapper::before{
+	content: " ";
+	position: absolute;
+	border: 3px solid #2c3e50;
+	background-color: #FFF;
+	height: 12px;
+	width: 12px;
+	border-radius: 9px;
+	left: -33px;
+	top: 15px;
+	border-top-right-radius: 0px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.entry .name{
+	font-size: 2.5em;
+	display: block;
+	color: #2c3e50;
+	font-family: "Roboto", "proxima-nova-extra-condensed", Arial, sans-serif;
+	font-weight: bold; 
+}
+
+.entry h3{
+	letter-spacing: 5px;
+	font-weight: 600;
+	font-size: 1em;
+	color: #2c3e50;
+	text-transform: uppercase;
+	margin: 3px 0;
+	font-family: "Roboto", "effra", Arial, sans-serif;
+}
+
+.entry h3 span{
+	display: block;
+}
+
+.content p{
+	position: relative;
+	z-index: 5;
+}
+
+.entry .image-area {
+	position: relative;
+}
+
+.entry picture{
+	margin: 50px 0 0;
+}
+
+.entry .interactions{
+	color: #0c2e43;
+	list-style: none;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", "proxima-nova-extra-condensed", Arial, sans-serif;
+}
+
+.entry .interactions > li{
+	display: inline-block;
+	box-sizing: border-box;
+	border-top: 1px dashed #0c2e43;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0 0;
+}
+
+.entry .interactions > li:first-child{
+	border-top: none;
+}
+
+.entry .interactions .name{
+	display: block;
+	text-transform: uppercase;
+	font-size: 17px;
+	padding-top: 5px;
+}
+
+.entry .interactions .value{
+	display: block;
+	font-size: 26px;
+	font-weight: bold;
+	padding: 5px 0 0;
+	text-transform: uppercase;
+	font-weight: 600;
+}
