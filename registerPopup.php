@@ -23,7 +23,9 @@
    		<input type="password" name="passwordConfirm" class="registerFormPasswordConfirm input w100 mt10" placeholder="Confirm Password" onchange="registerFormCheckConfirmPassword()">
    		<input type="submit" class="button w100" value="Continue">
    	</form>
-   	<button type="button" class="button w100 mt15" onclick="hideRegisterPopup()">Cancel</button>
+    <a href="index.php" style="border-bottom:0px;">
+   	    <button type="button" class="button w100 mt15">Cancel</button>
+    </a>
 	</div> 
     </body>
 </html>

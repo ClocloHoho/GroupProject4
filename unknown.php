@@ -1,3 +1,15 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script language="javascript" type="text/javascript" src="js/global.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <title>Eat in Cork</title>
+</head>
+<body>
+<?php
+if($isAdmin){?>
+    <a href="index.php?page=backofficeHomepage"><button class="loginSubmitButton">backoffice</button></a>
+<?php } ?>
+    <a href="tools/logout.php"><button class="loginSubmitButton">logout</button></a></br>
 <?php
 // Should probably be renamed "home.php"
 
@@ -75,3 +87,4 @@ if ($rows!=0)
   <?php }
 }
 ?>
+</body>
