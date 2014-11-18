@@ -5,6 +5,7 @@
         <title>Eat in Cork</title>
         <link rel="stylesheet" type="text/css" href="css/menu_fixed.css">
         <link rel="stylesheet" type="text/css" href="css/main_page.css">
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
     </head>
 
