@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <title>Eat in Cork</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/menu_fixed.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
@@ -16,20 +17,20 @@
 			<ul>
 			<!--First Link-->
 				<li class="other-side smartphones-links">
-					<a href="#">Home</a></li>
+					<a href="#">HOME</a></li>
 				</li>
 			<!--End of the first Link-->
 			
 			<!--Second Link-->
 				<li class="other-side smartphones-links">
-					<a href="#">Log Out</a>
+					<a href="#">LOG OUT</a>
 				</li>
 			<!--End of the second Link-->
 			<!--Third Link-->
 				<li class="smartphones-links">
 					<div id="wrap">
   						<form action="" autocomplete="on">
-  							<input id="search" name="search" type="text" placeholder="Restaurant"><input id="search_submit" value="Search" type="submit">
+  							<input id="search" name="search" type="text" placeholder="RESTAURANT"><input id="search_submit" value="SEARCH" type="submit">
   						</form>
 					</div>
 				</li>

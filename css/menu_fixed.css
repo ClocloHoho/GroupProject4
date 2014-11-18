@@ -1,8 +1,10 @@
+header{font-family: "Roboto", Arial, sans-serif; font-weight: 500;}
+
 li{list-style-type: none;}
 
-a{text-decoration: none;color: #ffffff;}
+a{text-decoration: none;color: #f1c40f;}
 
-a:hover{color: #ffffff;}
+a:hover{color: #f1c40f;}
 
 #center{max-width:960px; margin: auto;}
 
@@ -15,7 +17,7 @@ nav ul li{width: 15.71em; display:inline-block; text-align:right; margin: 0.8em;
 #background-menu{
 width: 100%;
 height: 3em;
-background: #ec7064;
+background: #2980B9;
 position: fixed;
 }
 
@@ -26,18 +28,19 @@ display: none;
 #wrap {
   display: inline-block;
   padding: 0;
-  border: 1px solid #ffffff
+  border: 1px solid #f1c40f;
 }
 
 #search{
 background: transparent;
 border: none;
-color: #ffffff;
+color: #f1c40f;
 }
 
 #search_submit{
 border: none;
 background: transparent;
+color: #f1c40f;
 }
 
 /*
@@ -58,9 +61,9 @@ nav ul li{display:inline;}
 height: 40px;
 margin-top: 1px;
 padding-top: 20px;
-border-top: 1px solid #fff;
-border-bottom: 1px solid #fff;
-background-color: #ec7064;
+border-top: 1px solid #f1c40f;
+border-bottom: 1px solid #f1c40f;
+background-color: #2980B9;
 position: relative;}
 #bouton-menu{display: block;}
 #bouton-menu a{
