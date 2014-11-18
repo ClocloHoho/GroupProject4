@@ -9,75 +9,121 @@
     <body>
     
     <header>
+    	<div id="background-menu">
     	<div id="center">
+    	<div id="bouton-menu"><a href="#"><img src="../img"/></a></div>
 		<nav>
 			<ul>
+			<!--First Link-->
+				<li class="other-side smartphones-links">
+					<a href="#">Home</a></li>
+				</li>
+			<!--End of the first Link-->
 			
-				<li>
-					<a href="">Home</a></li>
+			<!--Second Link-->
+				<li class="other-side smartphones-links">
+					<a href="#">Log Out</a>
 				</li>
-
-				<li>
-					<a href="">Log Out</a>
-				</li>
-				
-				<li>
+			<!--End of the second Link-->
+			<!--Third Link-->
+				<li class="smartphones-links">
 					<div id="wrap">
   						<form action="" autocomplete="on">
-  							<input id="search" name="search" type="text" placeholder="Search a restaurant"><input id="search_submit" value="Rechercher" type="submit">
+  							<input id="search" name="search" type="text" placeholder="Restaurant"><input id="search_submit" value="Search" type="submit">
   						</form>
 					</div>
 				</li>
-				
+			<!--End of the third Link-->		
 			</ul>
 		</nav>
 		</div>
+		</div>
 	</header>
 	
+	<section class="app">
 	<div class="container">
 		<div class="timeline">
-			<section class="entry left-side">
+			<section class="entry" id="restaurant1" itemscope itemtype="http://schema.org/CreativeWork">
 				<div class="wrapper">
 					<div class="header-row">
 						<div class="content-name">
-							<span class="name">*Name of the restaurant*</span>
+							<span class="name">*****</span>
 						</div>
 						<div class="content">
-							<h3>*Here : the stars of the restaurant (but no rating possible)*</h3>
+							<h3>*Name of the restaurant*</h3>
 							<p>*Description of the restaurant*</p>
 						</div>
 					<div>
 					<aside class="image-area">
 						*Here : the Instagram pictures*
 					</aside>
-					<aside class="links">
-						<h3>*Here : Google Maps*</h3>
-						<h3>*Here : Suggestions*</h3>
-					</aside>
+					<ul class="interactions">
+						<li>
+							<span class="name">Where to find us ?</span>
+							<span class="value">*The Google Map*</span>
+						</li>
+						<li>
+							<span class="name">Suggestions ?</span>
+							<span class="value">*<img src="" alt="Enveloppe"/>*</span>
+						</li>
+					</ul>
 				</div>
 			</section>
 			
-			<section class="entry right-side">
+			<section class="entry" id="restaurant2" itemscope itemtype="http://schema.org/CreativeWork">
 				<div class="wrapper">
 					<div class="header-row">
 						<div class="content-name">
-							<span class="name">*Name of the restaurant*</span>
+							<span class="name">*****</span>
 						</div>
 						<div class="content">
-							<h3>*Here : the stars of the restaurant (but no rating possible)*</h3>
+							<h3>*Name of the restaurant*</h3>
 							<p>*Description of the restaurant*</p>
 						</div>
 					<div>
 					<aside class="image-area">
 						*Here : the Instagram pictures*
 					</aside>
-					<aside class="links">
-						<h3>*Here : Google Maps*</h3>
-						<h3>*Here : Suggestions*</h3>
+					<ul class="interactions">
+						<li>
+							<span class="name">Where to find us ?</span>
+							<span class="value">*The Google Map*</span>
+						</li>
+						<li>
+							<span class="name">Suggestions ?</span>
+							<span class="value">*<img src="" alt="Enveloppe"/>*</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="entry" id="restaurant3" itemscope itemtype="http://schema.org/CreativeWork">
+				<div class="wrapper">
+					<div class="header-row">
+						<div class="content-name">
+							<span class="name">*****</span>
+						</div>
+						<div class="content">
+							<h3>*Name of the restaurant*</h3>
+							<p>*Description of the restaurant*</p>
+						</div>
+					</div>
+					<aside class="image-area">
+						*Here : the Instagram pictures*
 					</aside>
+					<ul class="interactions">
+						<li>
+							<span class="name">Where to find us ?</span>
+							<span class="value">*The Google Map*</span>
+						</li>
+						<li>
+							<span class="name">Suggestions ?</span>
+							<span class="value">*<img src="" alt="Enveloppe"/>*</span>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</div>
 	</div>
+	</section>
     </body>
 </html>
