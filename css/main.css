@@ -470,11 +470,45 @@ margin-top: 100px;
     zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/*
+* Media Queries
+*/
+
+@media all and (max-width: 720px) {
+    h1 {
+        font-size: 44px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+    .title-4xl {
+        font-size: 74px;
+    }
+    .title-3xl {
+        font-size: 64px;
+    }
+    .title-2xl {
+        font-size: 54px;
+    }
+    .title-xl {
+        font-size: 44px;
+    }
+    .title-l {
+        font-size: 34px;
+    }
+    .title-m {
+        font-size: 28px;
+    }
+    .title-s {
+        font-size: 24px;
+    }
+}
 
 @media only screen and (min-width: 768px) {
      
@@ -539,6 +573,16 @@ margin-top: 100px;
             background: none;
         }
      
+}
+
+.registerFormFieldLoading{
+    background: url(../images/load.gif) no-repeat scroll 160px 3px/15px;
+}
+.registerFormFieldOk{
+    background: url(../images/ok.png) no-repeat scroll 160px 3px/15px;
+}
+.registerFormFieldKo{
+    background: url(../images/ko.png) no-repeat scroll 160px 3px/15px;
 }
 
 @media print,
