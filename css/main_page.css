@@ -94,6 +94,7 @@ textarea {
 .timeline{
 	position: absolute;
 	top: 120px;
+	margin-left: 20%;
 }
 
 .timeline::before{
@@ -118,6 +119,7 @@ textarea {
 
 .timeline > .entry .wrapper{
 	position: relative;
+	width: 100%;
 }
 
 .timeline > .entry .wrapper::before{
@@ -195,7 +197,7 @@ textarea {
 .entry .interactions .name{
 	display: block;
 	text-transform: uppercase;
-	font-size: 17px;
+	font-size: 0.7em;
 	padding-top: 5px;
 }
 
@@ -230,7 +232,7 @@ textarea {
 		content: " ";
 	}
 .entry .interactions > li{
-		width: 33.3%;
+		width: 50%;
 		border-left: 1px dashed #0c2e43;
 		border-top: none;
 		padding: 15px 10px;
@@ -248,31 +250,13 @@ textarea {
 }
 
 @media all and (min-width: 720px) {
-.timeline::before{
-		left: 50%;
-	}
 .timeline > .entry{
 		margin-left: 0;
 		margin-right: 0;
 		display: block;
 		box-sizing: border-box;
-		max-width: 50%;
 		float: left;
     	clear: left;
-		padding: 50px 0 250px; 
-	}
-.timeline > .entry:nth-child(2n) {
-	    float: right;
-	    clear: right;
-	}
-.timeline > .entry#restaurant1{
-	    padding-bottom: 500px;
-	}
-.timeline > .entry#restaurant2{
-		padding-top: 500px;
-	}
-.timeline > .entry#restaurant3{
-		padding-bottom: 500px;
 	}
 .entry > .wrapper{
 		padding: 0 30px 0 10px;
