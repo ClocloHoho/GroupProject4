@@ -180,3 +180,12 @@ content: "";
 .bottom{
 margin-top: 100px;
 }
+.registerFormFieldLoading{
+    background: url(../img/ico_loading.gif) no-repeat scroll 160px 3px/15px;
+}
+.registerFormFieldOk{
+    background: url(../img/ok.png) no-repeat scroll 160px 3px/15px;
+}
+.registerFormFieldKo{
+    background: url(../img/ko.png) no-repeat scroll 160px 3px/15px;
+}
