@@ -46,12 +46,14 @@
                                 </a>
                             </div>
                             <div class="LogIn">
-                                <form action="tools/login.php" method="post" class="block-left block">
+                                <a href="index.php?page=login">
+                                <!--<form action="tools/login.php" method="post" class="block-left block">
                                     <input type="text" name="userName" id="userName" placeholder="Username" class="loginFormFields">
                                     <input type="password" name="password" id="password" placeholder="Password" class="loginFormFields">
                                     <input type="submit" value="Login" class="loginSubmitButton">
-                                </form>
-                                <!--<button class="button block-left block" onclick="showLogin()">Log In</button>-->
+                                </form>-->
+                                    <button class="button block-left block">Log In</button>
+                                </a>
                             </div>
                         </div>
                     </div>

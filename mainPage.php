@@ -90,7 +90,7 @@ function showRestaurants()
 
                     <!--Second Link-->
                     <li class="other-side smartphones-links">
-                        <a href="#">LOG OUT</a>
+                        <a href="tools/logout.php">LOG OUT</a>
                     </li>
                     <!--End of the second Link-->
                     <!--Third Link-->
