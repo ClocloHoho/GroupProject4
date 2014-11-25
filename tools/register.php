@@ -7,9 +7,9 @@ if(!(isset($_POST["password"]) && isset($_POST["password"]) && isset($_POST["ema
 	header('Location: ../index.php?failedRegister=true');
 	die();
 }
-
+$password= password_hash($_POST["password"], PASSWORD_DEFAULT);
 //If the username is already used, we stop there
-$checkUsernameQuery = mysql_query("SELECT * FROM USER WHERE userName='".$_POST["userName"]."' AND userPassword ='".$_POST["password"]."'");
+$checkUsernameQuery = mysql_query("SELECT * FROM USER WHERE userName='".$_POST["userName"]."'");
 $rows = mysql_num_rows($checkUsernameQuery);
 if ($rows!=0) {
     header('Location: ../index.php?failedRegister=true');
@@ -19,7 +19,7 @@ if ($rows!=0) {
 // mysql request
 // TODO preven SQL injections
 $query='INSERT INTO user(userPassword, userName, useremail, userIsAdmin) VALUES ("'.
-    $_POST["password"].'", "'.$_POST["password"].'", "'.$_POST["email"].'", 0)';
+    $password.'", "'.$_POST["userName"].'", "'.$_POST["email"].'", 0)';
 $inserts=mysql_query($query);
 if(!$inserts)
 {
