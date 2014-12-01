@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Yanone Kaffeesatz;
+    src: url(../fonts/yanone-kaffeesatz/YanoneKaffeesatz-Regular.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/roboto/Roboto-Light.ttf);
+}
+
 html,
 button,
 input,
@@ -13,6 +23,7 @@ body {
     background: #ecf0f1;
     font-family: 'Roboto', Arial, sans-serif;
 }
+
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
