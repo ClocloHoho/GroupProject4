@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8" />
         <title>Eat in Cork</title>
-        <link rel="stylesheet" type="text/css" href="css/menu_fixed.css">
         <link rel="stylesheet" type="text/css" href="css/main_page.css">
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
@@ -11,37 +10,17 @@
 
     <body>
     
-    <header>
-    	<div id="background-menu">
-    	<div id="center">
-    	<div id="bouton-menu"><a href="#"><img src="../img"/></a></div>
-		<nav>
-			<ul>
-			<!--First Link-->
-				<li class="other-side smartphones-links">
-					<a href="#">HOME</a></li>
-				</li>
-			<!--End of the first Link-->
-			
-			<!--Second Link-->
-				<li class="other-side smartphones-links">
-					<a href="#">LOG OUT</a>
-				</li>
-			<!--End of the second Link-->
-			<!--Third Link-->
-				<li class="smartphones-links">
-					<div id="wrap">
-  						<form action="" autocomplete="on">
-  							<input id="search" name="search" type="text" placeholder="RESTAURANT"><input id="search_submit" value="SEARCH" type="submit">
-  						</form>
-					</div>
-				</li>
-			<!--End of the third Link-->		
-			</ul>
-		</nav>
-		</div>
-		</div>
-	</header>
+   <div class="menu-trigger"></div>
+	
+	<nav id="navbar">
+		<ul>
+			<li><a href="http://ethercycle.com/stickymenu">HOME</a></li>
+		</ul>
+
+		<ul>
+			<li><a href="http://www.linkedin.com/company/ethercycle">LOGOUT</a></li>
+		</ul>
+	</nav>
 	
 	<section class="app">
 	<div class="container">
@@ -128,5 +107,21 @@
 		</div>
 	</div>
 	</section>
+<script>
+	window.onscroll=function(){document.getElementById('navbar').setAttribute('class', (window.pageYOffset>5?'fixednav clearfix':'clearfix'));}
+</script>
+	
+<script>
+	(function() {
+		var $body = document.body
+		, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+		if ( typeof $menu_trigger !== 'undefined' ) {
+			$menu_trigger.addEventListener('click', function() {
+				$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+			});
+		}
+	}).call(this);
+</script>  
     </body>
 </html>
