@@ -3,7 +3,7 @@ include("init.php");
 //TODO inform the user request failed
 
 // If one of the fields is missing, no need to go further
-if(!(isset($_POST["password"]) && isset($_POST["password"]) && isset($_POST["email"]))){
+if(!(isset($_POST["userName"]) && isset($_POST["password"]) && isset($_POST["email"]))){
 	header('Location: ../index.php?failedRegister=true');
 	die();
 }

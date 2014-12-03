@@ -78,11 +78,11 @@ function showRestaurants()
 	
 	<nav id="navbar">
 		<ul>
-			<li><a href="http://ethercycle.com/stickymenu">HOME</a></li>
+			<li><a href=""#">HOME</a></li>
 		</ul>
 
 		<ul>
-			<li><a href="http://www.linkedin.com/company/ethercycle">LOGOUT</a></li>
+			<li><a href="tools/logout.php">LOGOUT</a></li>
 		</ul>
 	</nav>
 
