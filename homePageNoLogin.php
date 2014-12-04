@@ -96,7 +96,8 @@
             </div>
         </section>
     </div>
-<footer>
+<!--FOOTER-->
+            <footer>
                <div class="splitter"></div>
         <ul>
             <li>
@@ -116,7 +117,7 @@
     <li>
         <div class="icon" data-icon="s"></div>
         <div class="text">
-            <h4>Cloud</h4>
+            <h4>The Team</h4>
             <div><a href="#">Read more</a></div>
         </div>
     </li>
@@ -124,36 +125,25 @@
 
     <div class="bar">
         <div class="bar-wrap">
-            <ul class="links"> <!-- footer menu -->
-                <li><a href="#">Home</a></li>
-                <li><a href="#">License</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Advertise</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-
             <div class="social">
                 <a href="#" class="fb">
-                <span data-icon="f" class="icon"></span>
+                <span data-icon="f" class="icon"><img src="img/facebook.png"/></span>
                 <span class="info">
                     <span class="follow">Become a fan Facebook</span>
-                    <span class="num">9,999</span>
                 </span>
             </a>
 
             <a href="#" class="tw">
-                <span data-icon="T" class="icon"></span>
+                <span data-icon="T" class="icon"><img src="img/social.png"/></span>
                 <span class="info">
                     <span class="follow">Follow us Twitter</span>
-                    <span class="num">9,999</span>
                 </span>
             </a>
 
             <a href="#" class="rss">
-                <span data-icon="R" class="icon"></span>
+                <span data-icon="R" class="icon"><img src="img/rss.png"/></span>
                 <span class="info">
                     <span class="follow">Subscribe RSS</span>
-                    <span class="num">9,999</span>
                 </span>
             </a>
             </div>
