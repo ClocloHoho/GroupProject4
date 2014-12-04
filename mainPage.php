@@ -76,17 +76,21 @@ function showRestaurants()
 
 <body>
 
-<div class="menu-trigger"></div>
-	
-	<nav id="navbar">
+	<nav>
 		<ul>
-			<li><a href=""#">HOME</a></li>
-		</ul>
-
-		<ul>
-			<li><a href="tools/logout.php">LOGOUT</a></li>
+			<li><a href="mainPage.php">Home</a></li>
+			<li><a href="aboutSite.html">About</a></li>
+			<li><a href="aboutUs.html">Team</a></li>
+			<li><a href="contactUs.php">Contact</a></li>
+			<li><a href="#">Logout</a></li>
+			<li>
+				<form method="get" action="/search" id="search">
+  					<input name="q" type="text" size="40" placeholder="Search..." />
+				</form>
+			</li>
 		</ul>
 	</nav>
+
 
 <section class="app">
     <div class="container">
