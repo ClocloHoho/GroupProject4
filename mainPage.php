@@ -68,7 +68,7 @@ function showRestaurants()
 <head>
     <meta charset="utf-8" />
     <title>Eat in Cork</title>
-    <link rel="stylesheet" type="text/css" href="css/main_page.css">
+    <link rel="stylesheet" type="text/css" href="css/mainPage.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -92,18 +92,8 @@ function showRestaurants()
 	</nav>
 
 
-<section class="app">
+<section class="app" id="screen1">
     <div class="container">
-    
-   <div id="form-container">
-        <!--<input type="submit" id="searchsubmit" value="" />-->
-            <a class="search-submit-button" href="javascript:void(0)">
-				<img src="img/search.png" alt="search"/>
-			</a>
-            <div id="searchtext">
-                <input type="text" id="s" name="s" value="Search Something...">
-            </div>
-    </div>
         <div class="timeline">
 
 <?php
@@ -112,63 +102,6 @@ function showRestaurants()
 
 		</div>
 	</div>
-	
-	<!--FOOTER-->
-    <footer>
-               <div class="splitter"></div>
-        <ul>
-            <li>
-        <div class="icon" data-icon="E"></div>
-        <div class="text">
-            <h4>About</h4>
-            <div> <a href="#">Read more</a></div>
-        </div>
-    </li>
-    <li>
-        <div class="icon" data-icon="a"></div>
-        <div class="text">
-            <h4>Terms</h4>
-            <div><a href="#">Read more</a></div>
-        </div>
-    </li>
-    <li>
-        <div class="icon" data-icon="s"></div>
-        <div class="text">
-            <h4>The Team</h4>
-            <div><a href="#">Read more</a></div>
-        </div>
-    </li>
-        </ul>
-
-    <div class="bar">
-        <div class="bar-wrap">
-            <div class="social">
-                <a href="#" class="fb">
-                <span data-icon="f" class="icon"><img src="img/facebook.png"/></span>
-                <span class="info">
-                    <span class="follow">Become a fan Facebook</span>
-                </span>
-            </a>
-
-            <a href="#" class="tw">
-                <span data-icon="T" class="icon"><img src="img/social.png"/></span>
-                <span class="info">
-                    <span class="follow">Follow us Twitter</span>
-                </span>
-            </a>
-
-            <a href="#" class="rss">
-                <span data-icon="R" class="icon"><img src="img/rss.png"/></span>
-                <span class="info">
-                    <span class="follow">Subscribe RSS</span>
-                </span>
-            </a>
-            </div>
-            <div class="clear"></div>
-            <div class="copyright">&copy;  2014 All Rights Reserved</div>
-        </div>
-    </div>
-            </footer>
 </section>
 
 <script>
