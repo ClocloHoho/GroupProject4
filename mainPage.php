@@ -26,7 +26,7 @@ function showRestaurants()
                             <ul class="interactions">
                                 <li>
                                     <span class="name">Where to find us ?</span>
-                                    <!--<script>
+                                    <script>
                                         function initialize<?php echo($i); ?>() {
                                             var myLatlng = new google.maps.LatLng(<?php echo($row['restaurantGPSX']);?>, <?php echo($row['restaurantGPSY']);?>);
                                             var mapCanvas = document.getElementById('map_canvas<?php echo($i); ?>');
@@ -43,9 +43,9 @@ function showRestaurants()
                                             });
                                         }
                                         google.maps.event.addDomListener(window, 'load', initialize<?php echo($i); ?>);
-                                    </script>-->
+                                    </script>
                                     <span class="value">
-                                        <!--<div id="map_canvas<?php echo($i); ?>" class="map_canvas"></div>-->
+                                        <div id="map_canvas<?php echo($i); ?>" class="map_canvas"></div>
                                     </span>
                                 </li>
                                 <li>
@@ -54,6 +54,8 @@ function showRestaurants()
                                 </li>
                             </ul>
                         </div>
+            		</div>
+            	</div>
             </section>
 
         <?php
@@ -88,6 +90,16 @@ function showRestaurants()
 
 <section class="app">
     <div class="container">
+    
+   <div id="form-container">
+        <!--<input type="submit" id="searchsubmit" value="" />-->
+            <a class="search-submit-button" href="javascript:void(0)">
+				<img src="img/search.png" alt="search"/>
+			</a>
+            <div id="searchtext">
+                <input type="text" id="s" name="s" value="Search Something...">
+            </div>
+    </div>
         <div class="timeline">
 
 <?php
@@ -96,8 +108,9 @@ function showRestaurants()
 
 		</div>
 	</div>
+	
 	<!--FOOTER-->
-            <footer>
+    <footer>
                <div class="splitter"></div>
         <ul>
             <li>
@@ -152,7 +165,8 @@ function showRestaurants()
         </div>
     </div>
             </footer>
-	</section>
+</section>
+
 <script>
 	window.onscroll=function(){document.getElementById('navbar').setAttribute('class', (window.pageYOffset>5?'fixednav clearfix':'clearfix'));}
 </script>
