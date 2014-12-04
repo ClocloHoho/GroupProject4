@@ -1,0 +1,417 @@
+@font-face {
+    font-family: Yanone Kaffeesatz;
+    src: url(../fonts/yanone-kaffeesatz/YanoneKaffeesatz-Regular.otf);
+}
+
+@font-face
+{
+    font-family: 'Yanone Kaffeesatz';
+    src: url('fonts/yanone-kaffeesatz/YanoneKaffeesatz-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #000000;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    background: #ecf0f1;
+    font-family: 'Roboto', Arial, sans-serif;
+    }
+
+.clearfix:before,.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ */
+
+::-moz-selection {
+    background: #ffffff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ecf0f1;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#container {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 70%;
+	margin: auto;
+	height: 100%;
+	margin-top: 6%;
+}
+
+/*
+* NAVIGATION BAR
+*/
+
+#navbar {
+	width: 70%; /* Should be same width as content container */
+	position: fixed;
+	top: 0;	left: 15%; /* Left is 100-[content width]/2). */
+	opacity: 1;
+	z-index: 100;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+	text-align: center;
+}
+
+nav ul {
+	font-family: "Roboto", Arial, sans-serif;
+	list-style-type: none;
+	background-color: #2980B9;
+	width: 50%;
+	margin: 0;
+	padding: 10px 0;
+	color: #f1c40f;
+}
+
+nav ul:nth-of-type(1) {float: left;}
+nav ul:nth-of-type(2) {float: right;}
+
+nav ul li {
+	float: left;
+	margin: 0;
+	padding: 8px;
+}
+nav ul:nth-of-type(2) li {float: right;}
+
+nav ul li a {
+	text-decoration: none;
+	color: #f1c40f;
+}
+
+nav ul li a:hover {text-decoration: underline;}
+
+.fixednav {
+	left: 0 !important;
+	width: 100% !important;
+	opacity: .9 !important;
+}
+
+.filler {font-size: .8em;}
+
+.fixednav ul {
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+	width: 15% !important;
+	text-align: center;
+}
+.fixednav ul li {display: block; float: none;}
+.fixednav ul:nth-of-type(2) li {float: none;}
+
+/*
+*SEARCH BAR
+*/
+
+input, select, textarea {
+                background: none repeat scroll 0 0 #fafafa;
+                border: 1px solid #eeeeee;
+                color: #5e5e5e;
+                display: block;
+                font-family: arial, sans-serif;
+                font-size: inherit;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+                margin: 0;
+        		margin-top: 1%;
+        		margin-bottom: 1%;
+                height: 40px;
+            }
+            
+#searchtext {
+        overflow: hidden;
+            }
+            
+a.search-submit-button {
+                background: none repeat scroll 0 0 #fafafa;
+                border-bottom: 1px solid #eeeeee;
+                border-right: 1px solid #eeeeee;
+                border-top: 1px solid #eeeeee;
+                color: #5e5e5e !important;
+                display: block;
+                float: right;
+                font-family: inherit;
+                font-size: 20px;
+                padding: 8px 10px;
+                text-align: center;
+                width: 45px;
+                box-sizing: border-box;
+                height: 40px;
+                margin-top: 0.9%;
+        		margin-bottom: 1%;
+            }
+        
+a.search-submit-button img{
+	margin-bottom: 10px;
+}
+        
+/*
+*BODY OF THE PAGE
+*/
+
+#content {
+	width: 600px;
+	float: left;
+}
+
+#sidebar {
+	width: 280px;
+	float: right;
+}
+
+#sidebar {
+	width: 30%px;
+	float: right;
+}
+
+/*
+* FOOTER
+*/
+
+footer {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+footer .splitter {
+    height: 20px;
+}
+
+footer > ul {
+    list-style: none outside none;
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 25px 0;
+    position: relative;
+    width: 100%;
+}
+footer > ul li {
+    float: left;
+    padding: 20px 15px;
+    width: 33.3%;
+
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+footer > ul li:first-child {
+    padding-left: 0;
+}
+footer > ul li:nth-child(3) {
+    padding-right: 0;
+}
+footer > ul li .icon {
+    color: #999999;
+    float: left;
+    font-size: 50px;
+    line-height: 80px;
+}
+footer > ul li .text {
+    color: #848889;
+    font-size: 13px;
+    line-height: 20px;
+    /*margin-left: 105px;*/
+    position: relative;
+    text-align: justify;
+}
+.text h4 {
+    color: #848889;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.text a {
+    border-bottom: 1px dotted transparent;
+    color: #848889;
+    font-weight: bold;
+}
+.text a:hover {
+    border-color: #848889;
+}
+
+footer .bar {
+    background-color: #1E2629;
+    padding: 20px 0;
+}
+footer .bar-wrap {
+    font-size: 12px;
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+    width: 95%;
+}
+
+.social {
+    position: relative;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+.social a {
+    color: #778888;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+.social .icon {
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 5px;
+    vertical-align: middle;
+
+    -webkit-transition: -webkit-transform .3s linear;
+    -moz-transition: -moz-transform .3s linear;
+    -ms-transition: -ms-transform .3s linear;
+    -o-transition:  -o-transform .3s linear;
+    transition: transform .3s linear;
+}
+.social a:hover  .icon {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.social .info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.social .info .follow {
+    display: block;
+}
+.social .info .num {
+    display: block;
+}
+.copyright {
+    color: #778888;
+    margin-top: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+
+	#pagewrap {
+		width: 95%;
+	}
+
+	#content {
+		width: 60%;
+		padding: 3% 4%;
+	}
+
+	#sidebar {
+		width: 30%;
+	}
+	#sidebar .widget {
+		padding: 8% 7%;
+		margin-bottom: 10px;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+footer{
+	display: none;
+	}
+}
+
+@media screen and (max-width: 650px) {
+
+	#content {
+		width: auto;
+		float: none;
+		margin: 20px 0;
+	}
+
+	#sidebar {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	html {
+		-webkit-text-size-adjust: none;
+	}
+}
