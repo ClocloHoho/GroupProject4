@@ -96,6 +96,62 @@ function showRestaurants()
 
 		</div>
 	</div>
+	<!--FOOTER-->
+            <footer>
+               <div class="splitter"></div>
+        <ul>
+            <li>
+        <div class="icon" data-icon="E"></div>
+        <div class="text">
+            <h4>About</h4>
+            <div> <a href="#">Read more</a></div>
+        </div>
+    </li>
+    <li>
+        <div class="icon" data-icon="a"></div>
+        <div class="text">
+            <h4>Terms</h4>
+            <div><a href="#">Read more</a></div>
+        </div>
+    </li>
+    <li>
+        <div class="icon" data-icon="s"></div>
+        <div class="text">
+            <h4>The Team</h4>
+            <div><a href="#">Read more</a></div>
+        </div>
+    </li>
+        </ul>
+
+    <div class="bar">
+        <div class="bar-wrap">
+            <div class="social">
+                <a href="#" class="fb">
+                <span data-icon="f" class="icon"><img src="img/facebook.png"/></span>
+                <span class="info">
+                    <span class="follow">Become a fan Facebook</span>
+                </span>
+            </a>
+
+            <a href="#" class="tw">
+                <span data-icon="T" class="icon"><img src="img/social.png"/></span>
+                <span class="info">
+                    <span class="follow">Follow us Twitter</span>
+                </span>
+            </a>
+
+            <a href="#" class="rss">
+                <span data-icon="R" class="icon"><img src="img/rss.png"/></span>
+                <span class="info">
+                    <span class="follow">Subscribe RSS</span>
+                </span>
+            </a>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">&copy;  2014 All Rights Reserved</div>
+        </div>
+    </div>
+            </footer>
 	</section>
 <script>
 	window.onscroll=function(){document.getElementById('navbar').setAttribute('class', (window.pageYOffset>5?'fixednav clearfix':'clearfix'));}
