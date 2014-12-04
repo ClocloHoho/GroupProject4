@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/pageRestaurant.css" />
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
         <title>Eat in Cork</title>
     </head>
 
@@ -40,11 +41,45 @@
             <div id="content">
             	<article class="post">
 					<div class="header-row">
-						<div class="content-name">
-							<span class="name">*****</span>
-						</div>
 						<div class="content">
 							<h3>*Name of the restaurant*</h3>
+							<div class="content-name">
+   							<fieldset class="rating">
+    								<input type="radio" id="star5" name="rating" value="5" />
+    									<label for="star5" title="Rocks!">
+    									5 stars
+    									</label>
+    								<input type="radio" id="star4" name="rating" value="4" />
+    									<label for="star4" title="Pretty good">
+    										4 stars
+    									</label>
+    								<input type="radio" id="star3" name="rating" value="3" />
+    									<label for="star3" title="Meh">
+    										3 stars
+    									</label>
+    								<input type="radio" id="star2" name="rating" value="2" />
+    									<label for="star2" title="Kinda bad">
+    										2 stars
+    									</label>
+    								<input type="radio" id="star1" name="rating" value="1" />
+    									<label for="star1" title="Sucks big time">
+    										1 star
+    									</label>
+							</fieldset>
+  
+							<strong class="choice"> </strong>
+							
+							<script type="text/javascript">
+								$(':radio').change(
+  									function(){
+    							$('.choice').text( this.value + ' stars' );
+      							var ratingNum = this.value;
+      							alert(ratingNum);
+  									} 
+								)           
+							</script>
+						</div>
+						
 							<p>*Description of the restaurant*</p>
 						</div>
 					<div>
@@ -150,5 +185,6 @@
 <!--[if lt IE 9]-->
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <!--[endif]-->
+        
     </body>
 </html>
