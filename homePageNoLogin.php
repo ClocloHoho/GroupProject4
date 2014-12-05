@@ -98,31 +98,6 @@
     </div>
 <!--FOOTER-->
             <footer>
-               <div class="splitter"></div>
-        <ul>
-            <li>
-        <div class="icon" data-icon="E"></div>
-        <div class="text">
-            <h4>About</h4>
-            <div> <a href="#">Read more</a></div>
-        </div>
-    </li>
-    <li>
-        <div class="icon" data-icon="a"></div>
-        <div class="text">
-            <h4>Terms</h4>
-            <div><a href="#">Read more</a></div>
-        </div>
-    </li>
-    <li>
-        <div class="icon" data-icon="s"></div>
-        <div class="text">
-            <h4>The Team</h4>
-            <div><a href="#">Read more</a></div>
-        </div>
-    </li>
-        </ul>
-
     <div class="bar">
         <div class="bar-wrap">
             <div class="social">
