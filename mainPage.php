@@ -76,6 +76,13 @@ function showRestaurants()
 
 <body>
 
+<section id="screen1">
+
+<p>
+	<?php
+    showRestaurants();
+	?>
+</p>
 	<nav>
 		<ul>
 			<li><a href="mainPage.php">Home</a></li>
@@ -91,34 +98,26 @@ function showRestaurants()
 		</ul>
 	</nav>
 
-
-<section class="app" id="screen1">
-    <div class="container">
-        <div class="timeline">
-
-<?php
-    showRestaurants();
-?>
-
-		</div>
-	</div>
 </section>
-
-<script>
-	window.onscroll=function(){document.getElementById('navbar').setAttribute('class', (window.pageYOffset>5?'fixednav clearfix':'clearfix'));}
-</script>
 	
-<script>
-	(function() {
-		var $body = document.body
-		, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+<section id="screen2"></section>
+<section id="screen3"></section>
 
-		if ( typeof $menu_trigger !== 'undefined' ) {
-			$menu_trigger.addEventListener('click', function() {
-				$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
-			});
-		}
-	}).call(this);
-</script>  
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+   $(document).ready(function(){
+	   $(window).bind('scroll', function() {
+	   var navHeight = $( window ).height() - 70;
+			 if ($(window).scrollTop() > navHeight) {
+				 $('nav').addClass('fixed');
+			 }
+			 else {
+				 $('nav').removeClass('fixed');
+			 }
+		});
+	});
+</script>
+
     </body>
 </html>

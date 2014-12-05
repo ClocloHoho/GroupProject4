@@ -42,7 +42,19 @@ section {
 
 /* Screens Settings */
 #screen1 {	
-	background: #FDE3A7;
+	background: #43b29d;
+}
+
+#screen1 p {
+	padding-top: 200px;
+}
+
+#screen2 {
+	background: #efc94d;
+}
+
+#screen3 {
+	background: #e1793d;
 }
 
 /*
