@@ -18,10 +18,10 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="mainPage.php">Home</a></li>
-			<li><a href="aboutSite.html">About</a></li>
-			<li><a href="aboutUs.html">Team</a></li>
-			<li><a href="contactUs.php">Contact</a></li>
+			<li><a href="index.php?page=mainPage">Home</a></li>
+			<li><a href="index.php?page=aboutSite">About</a></li>
+			<li><a href="index.php?page=aboutUs">Team</a></li>
+			<li><a href="index.php?page=contactUs">Contact</a></li>
 			<li><a href="#">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">
@@ -30,8 +30,6 @@
 			</li>
 		</ul>
 	</nav>
-
-<section id="screen1">
 
 <section id="screen1">
 
@@ -76,22 +74,34 @@ $(':radio').change(
 	</li>
 	<li>
 		<span class="name">Suggestions ?</span>
-		<span class="value"><a href="suggestionsPage.php"><img src="img/email.png" alt="Enveloppe"/></a></span>
+		<span class="value"><a href="index.php?page=contactUs"><img src="img/email.png" alt="Enveloppe"/></a></span>
 	</li>
 </ul>
 
 </div>
 
 <footer>
-	<a href="https://twitter.com/eatincork" class="twitter-follow-button" data-show-count="false" data-size="large">
-		Follow @eatincork
+	<a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">
+		Follow @Eat_In_Cork
 	</a> 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	<a href="https://twitter.com/intent/tweet?screen_name=eatincork" class="twitter-mention-button" data-size="large">
+	<a href="https://twitter.com/intent/tweet?screen_name=eat_in_cork" class="twitter-mention-button" data-size="large">
 		Tweet to @eatincork
 	</a> 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
+	<br></br>
+	<div class="fb-follow" data-href="https://www.facebook.com/eatincork" data-width="178px" data-height="28px" data-colorscheme="light" data-layout="button" data-show-faces="true"></div>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+  			var js, fjs = d.getElementsByTagName(s)[0];
+  			if (d.getElementById(id)) return;
+  			js = d.createElement(s); js.id = id;
+  			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
 
 </section>

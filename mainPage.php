@@ -3,7 +3,11 @@ function showRestaurants()
 {
     // Retrieve all restaurants in the database
     $i = -1;
-    $query = mysql_query("SELECT * FROM RESTAURANTS ");
+    
+    $query = mysql_query("SELECT * FROM RESTAURANTS");
+    if($query === FALSE) {
+    	die(mysql_error()); // TODO: better error handling
+    }
     $rows = mysql_num_rows($query);
     if ($rows != 0) {
         while ($row = mysql_fetch_assoc($query)) {
@@ -78,17 +82,12 @@ function showRestaurants()
 
 <section id="screen1">
 
-<p>
-	<?php
-    showRestaurants();
-	?>
-</p>
 	<nav>
 		<ul>
-			<li><a href="mainPage.php">Home</a></li>
-			<li><a href="aboutSite.html">About</a></li>
-			<li><a href="aboutUs.html">Team</a></li>
-			<li><a href="contactUs.php">Contact</a></li>
+			<li><a href="index.php?page=mainPage">Home</a></li>
+			<li><a href="index.php?page=aboutSite">About</a></li>
+			<li><a href="index.php?page=aboutUs">Team</a></li>
+			<li><a href="index.php?page=contactUs">Contact</a></li>
 			<li><a href="#">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">
@@ -97,6 +96,13 @@ function showRestaurants()
 			</li>
 		</ul>
 	</nav>
+
+<p>
+	<?php
+    showRestaurants();
+	?>
+</p>
+	
 
 </section>
 	

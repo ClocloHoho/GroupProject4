@@ -15,6 +15,16 @@
 
 <body class="loading">
 
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div id="preload">
     <img src="img/bcg_slide-1.jpg">
@@ -104,14 +114,16 @@
                 <a href="#" class="fb">
                 <span data-icon="f" class="icon"><img src="img/facebook.png"/></span>
                 <span class="info">
-                    <span class="follow">Become a fan Facebook</span>
+                    <span class="follow"><div class="fb-follow" data-href="https://www.facebook.com/eatincork" data-colorscheme="light" data-layout="button" data-show-faces="true"></div></span>
                 </span>
             </a>
 
             <a href="#" class="tw">
                 <span data-icon="T" class="icon"><img src="img/social.png"/></span>
                 <span class="info">
-                    <span class="follow">Follow us Twitter</span>
+                    <span class="follow"><a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">
+		Follow @Eat_In_Cork
+	</a> </span>
                 </span>
             </a>
 
