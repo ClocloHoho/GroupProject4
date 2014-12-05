@@ -57,7 +57,7 @@
 	</li>
 	<li>
 		<span class="name">Suggestions ?</span>
-		<span class="value"><a href="suggestionsPage.php"><img src="img/email.png" alt="Enveloppe"/></a></span>
+		<span class="value"><a href="index.php?page=contactUs"><img src="img/email.png" alt="Enveloppe"/></a></span>
 	</li>
 </ul>
 
@@ -84,6 +84,7 @@
   			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
+	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
 
 </section>
