@@ -1,16 +1,19 @@
 <!DOCTYPE html> 
 <html>
 <head>
+	<title>Eat in Cork</title>
     <link rel= "stylesheet" href="css/aboutSite.css" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
 </head> 
 
 <body>
 	<nav>
 		<ul>
-			<li><a href="mainPage.php">Home</a></li>
-			<li><a href="aboutSite.html">About</a></li>
-			<li><a href="aboutUs.html">Team</a></li>
-			<li><a href="contactUs.php">Contact</a></li>
+			<li><a href="index.php?page=mainPage">Home</a></li>
+			<li><a href="index.php?page=aboutSite">About</a></li>
+			<li><a href="index.php?page=aboutUs">Team</a></li>
+			<li><a href="index.php?page=contactUs">Contact</a></li>
 			<li><a href="#">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">

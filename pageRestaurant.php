@@ -17,10 +17,10 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="mainPage.php">Home</a></li>
-			<li><a href="aboutSite.html">About</a></li>
-			<li><a href="aboutUs.html">Team</a></li>
-			<li><a href="contactUs.php">Contact</a></li>
+			<li><a href="index.php?page=mainPage">Home</a></li>
+			<li><a href="index.php?page=aboutSite">About</a></li>
+			<li><a href="index.php?page=aboutUs">Team</a></li>
+			<li><a href="index.php?page=contactUs">Contact</a></li>
 			<li><a href="#">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">
@@ -29,8 +29,6 @@
 			</li>
 		</ul>
 	</nav>
-
-<section id="screen1">
 
 <section id="screen1">
 
@@ -66,8 +64,8 @@
 </div>
 
 <footer>
-	<a href="https://twitter.com/eatincork" class="twitter-follow-button" data-show-count="false" data-size="large">
-		Follow @eatincork
+	<a href="https://twitter.com/Eat_In_Cork" class="twitter-follow-button" data-show-count="false" data-size="large">
+		Follow @Eat_In_Cork
 	</a> 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	<a href="https://twitter.com/intent/tweet?screen_name=eatincork" class="twitter-mention-button" data-size="large">
