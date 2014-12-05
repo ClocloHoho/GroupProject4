@@ -152,14 +152,27 @@ p{
 *RATING
 */
 
+.rating {
+  
+  font-weight: bold;
+	margin-left:400px;
+	width:220px;
+	border: 2px solid red;
+	height:40px
+	
+}
+
+
 .rating:not(:checked) > input {
     position:absolute;
     top:-9999px;
-    border: none;
+    clip:rect(0,0,0,0);
 }
 
+
+
 .rating:not(:checked) > label {
-    /*float:right;*/
+    float:right;
     width:1em;
     padding:0 .1em;
     overflow:hidden;
@@ -168,7 +181,7 @@ p{
     font-size:200%;
     line-height:1.2;
     color:#ddd;
-    /*text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);*/
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .rating:not(:checked) > label:before {
@@ -176,14 +189,14 @@ p{
 }
 
 .rating > input:checked ~ label {
-    /*color: #f70;*/
-    /*text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);*/
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
     color: gold;
-    /*text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .rating > input:checked + label:hover,
@@ -191,8 +204,8 @@ p{
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    /*color: #ea0;*/
-    /*text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .rating > label:active {
@@ -215,4 +228,10 @@ p{
 		font-size: 14px;
 	}
 
+}
+
+
+
+p{
+overflow:scroll;
 }

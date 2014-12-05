@@ -11,6 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type='text/javascript' src='http://code.jquery.com/jquery-git.js'></script> 
 
 </head>
 
@@ -39,22 +40,38 @@
 <h1>Name of the restaurant</h1>
 
 <div id="rating">
-<div class="rating">
-	<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time"> </label>
-	<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad"> </label>
+  
+  <div class="rating">
+	<input type="radio" id="star1" name="rating" value="5" /><label for="star1" title="Sucks big time"> </label>
+	<input type="radio" id="star2" name="rating" value="4" /><label for="star2" title="Kinda bad"> </label>
 	<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh"> </label>
-	<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"> </label>
-    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!"> </label>
+	<input type="radio" id="star4" name="rating" value="2" /><label for="star4" title="Pretty good"> </label>
+    <input type="radio" id="star5" name="rating" value="1" /><label for="star5" title="Rocks!"> </label>
 </div>
   
-<strong class="choice"> </strong>
+<!--<strong class="choice"> </strong>-->
 </div>
+
+<script>
+            
+$(':radio').change(
+  function(){
+    $('.choice').text( this.value + ' stars' );
+      var ratingNum = this.value;
+	  console.log(ratingNum);
+      
+  } 
+)
+</script>
+
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <ul class="interactions">
 	<li>
-		<span class="name">Where to find us ?</span>
+	
+	<!--	<span class="name">Where to find us ?</span> -->
+	<img src ="gpsPic.jpg" height="15" width="20" alt="unavailable" id="gpsPic" style="margin-right:10px;"/><a href="location.html">Where to find us?</a>
 		<span class="value">*The Google Map*</span>
 	</li>
 	<li>
