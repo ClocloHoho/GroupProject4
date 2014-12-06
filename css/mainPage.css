@@ -164,8 +164,7 @@ p{
 	width:55%;
 	height:40px;
 	text-align: center;
-	margin: 15px;
-	
+	margin: 1%;
 }
 
 .rating:not(:checked) > input {
@@ -177,7 +176,7 @@ p{
 .rating:not(:checked) > label {
     float:right;
     width:1em;
-    padding:0 .1em;
+    padding:0.1em;
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
@@ -246,8 +245,17 @@ footer{
 	color: #757575;
 }
 
+.map_canvas{
+    height: 220px;
+    width:  60%;
+}
+
 @media only screen and (max-width: 800px) {
-#search{display: none;}
+	#search{display: none;}
+	
+	.rating {
+	width:60%;
+}
 }
 
 @media only screen and (max-width: 520px) {
@@ -255,14 +263,25 @@ footer{
 	nav li {
 		padding: 24px 4px;
 	}
-
+	
 	nav li a {
 		font-size: 14px;
 	}
+.rating {
+	width:65%;
 
 }
 
-.map_canvas{
-    height: 220px;
-    width:  60%;
+@media only screen and (max-width: 300px) {
+
+	nav li a {
+		font-size: 10px;	
+	}
+	
+	.rating:not(:checked) > label {
+    font-size:100%;
+	}
+	
+	.rating {
+	width:70%;
 }
