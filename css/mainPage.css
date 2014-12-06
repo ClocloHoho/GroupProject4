@@ -146,6 +146,12 @@ p{
 	font-size: 0.7em;
 	padding: 5px 0 0;
 	text-transform: uppercase;
+	padding-left: 30%;
+	padding-bottom: 2%;
+}
+
+#mail{
+	padding-left:0%;
 }
 
 /*

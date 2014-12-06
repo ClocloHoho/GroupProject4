@@ -39,7 +39,7 @@
             	She came up with the new trendy design. 
             	Her love for food was a great inspiration for her.  
             	</p>
-    	</div>
+    </div>
     
     <!--div container for each persons "about us"-->
     <div class="aboutus">
