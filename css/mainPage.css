@@ -36,9 +36,9 @@ nav li a {
 	text-transform: uppercase;
 }
 
-section {
+/*section {
 	height: 100vh;
-}
+}*/
 
 /* Screens Settings */
 #screen1 {	
@@ -254,4 +254,9 @@ footer{
 		font-size: 14px;
 	}
 
+}
+
+.map_canvas{
+    height: 220px;
+    width:  60%;
 }
