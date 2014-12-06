@@ -104,6 +104,38 @@ $(':radio').change(
 	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
 
+
+<!-- RSS feed -->
+
+
+<section id="rssFeed">
+
+<div id="feedTitle"><h4>Cork's Most Popular Caffes</h4></div>
+
+<?php
+
+$html = "";
+$url = "http://cork.gaycities.com/restaurants/rss.xml";
+
+$xml = simplexml_load_file($url);
+for($i = 2; $i < 6; $i++){
+	
+	$title = $xml->channel->item[$i]->title;
+	$link = $xml->channel->item[$i]->link;
+	$description = $xml->channel->item[$i]->description;
+	$pubDate = $xml->channel->item[$i]->pubDate;
+	$category = $xml->channel->item[$i]->category;
+	
+	$html .= "<a href='$link' id='titleStyleRSS'><h3>$title</h3></a> <br />";
+	$html .= "<div id='descriptionStyleRSS'>$description </div><br />";
+	$html .= "<div id='pubStyleRSS'>Publication Date: <br />$pubDate</div><hr />";
+	
+}
+echo $html;
+?>
+
+<section>
+
 </section>
 
 </body>

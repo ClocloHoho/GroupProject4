@@ -154,10 +154,9 @@ p{
 
 .rating {
   
-  font-weight: bold;
-	margin-left:400px;
+	font-weight:bold;
+	margin-left:500px;
 	width:220px;
-	border: 2px solid red;
 	height:40px
 	
 }
@@ -244,7 +243,45 @@ p{
 }
 
 
-
+/* Some description styling */
 p{
-overflow:scroll;
+
+}
+
+/* RSS styling */
+
+#rssFeed{
+	margin-top:-510px;
+	float:left;
+	height:330px;
+	overflow-y: scroll;
+	background-color:yellow;
+	display:block;
+	width:370px;
+	margin-left:4px;
+	
+}
+
+#feedTitle{
+color: #4183D7;
+text-transform: uppercase;
+text-align:center;
+padding-bottom:10px;
+}
+
+#titleStyleRSS{
+	color:red;
+}
+
+hr{
+padding:10px;
+background:purple;
+}
+
+#pubStyleRSS{
+color:blue
+}
+
+#descriptionStyleRSS{
+color:blue;
 }
