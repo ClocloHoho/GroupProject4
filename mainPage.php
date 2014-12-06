@@ -89,7 +89,7 @@ $(':radio').change(
                             </li>
                             <li>
                                 <span class="name">Suggestions ?</span>
-                                <span class="value"><img src="img/email.png" alt="Enveloppe"/></span>
+                                <span class="value" id="mail"><img src="img/email.png" alt="Enveloppe"/></span>
                             </li>
                         </ul>
                         </div>

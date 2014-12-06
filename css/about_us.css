@@ -13,10 +13,14 @@ body {
 	background: #34495E;
 }
 
+section{
+	height: 100%;
+}
+
 .aboutus{
-width: 345px;
-padding: 15px;
-float: left;
+width: 48%;
+padding-top: 3%;
+float:left;
 }
 
 .name{
@@ -32,7 +36,10 @@ line-height: 1.5;
 }
 
 p{
-	font-weight: 100%;
+	font-weight: 100;
+	text-align: justify;
+	width:70%;
+	margin: auto;
 }
 
 /*
