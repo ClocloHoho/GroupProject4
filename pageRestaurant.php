@@ -62,14 +62,13 @@ $(':radio').change(
 )
 </script>
 
+<img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo"/>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <ul class="interactions">
 	<li>
-	
-	<!--	<span class="name">Where to find us ?</span> -->
-	<img src ="gpsPic.jpg" height="15" width="20" alt="unavailable" id="gpsPic" style="margin-right:10px;"/><a href="location.html">Where to find us?</a>
+		<span class="name">Where to find us?</span>
 		<span class="value">*The Google Map*</span>
 	</li>
 	<li>
@@ -79,6 +78,8 @@ $(':radio').change(
 </ul>
 
 </div>
+
+</section>
 
 <footer>
 	<a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">
@@ -103,8 +104,6 @@ $(':radio').change(
 	</script>
 	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
-
-</section>
 
 </body>
 </html>

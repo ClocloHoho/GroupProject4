@@ -46,7 +46,7 @@ nav li a {
 }
 
 section {
-	height: 100vh;
+	height: 100%;
 }
 
 /* Screens Settings */
@@ -153,23 +153,20 @@ p{
 */
 
 .rating {
-  
   font-weight: bold;
-	margin-left:400px;
-	width:220px;
-	border: 2px solid red;
-	height:40px
+	/*margin-left:440px;*/
+	width:55%;
+	height:40px;
+	text-align: center;
+	margin: 15px;
 	
 }
-
 
 .rating:not(:checked) > input {
     position:absolute;
     top:-9999px;
     clip:rect(0,0,0,0);
 }
-
-
 
 .rating:not(:checked) > label {
     float:right;
@@ -178,7 +175,7 @@ p{
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:200%;
+    font-size:150%;
     line-height:1.2;
     color:#ddd;
     text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
@@ -215,8 +212,23 @@ p{
 }
 
 /*
+*IMAGE
+*/
+
+img#admin_photo
+{
+	width: 20%;
+	height: 20;
+	margin-bottom: 10px;
+}
+
+/*
 *FOOTER
 */
+footer{
+	margin-top: 20px;
+}
+
 #terms{
 	font-size: 10px;
 	font-family: 'Roboto', Arial, sans-serif;
@@ -242,8 +254,6 @@ p{
 	}
 
 }
-
-
 
 p{
 overflow:scroll;

@@ -52,7 +52,7 @@ nav li a {
 }
 
 section {
-	height: 100vh;
+	height: 100%;
 }
 
 /*
@@ -86,6 +86,22 @@ section {
 #search input[type="text"]:focus {
     width: 200px;
     }
+    
+/*
+*FOOTER
+*/
+footer{
+	margin-top: 20px;
+}
+
+#terms{
+	font-size: 10px;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 100;
+	margin: 10px;
+	font-style: none;
+	color: #757575;
+}
 
 @media only screen and (max-width: 800px) {
 #search{display: none;}

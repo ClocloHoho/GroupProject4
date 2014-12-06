@@ -91,7 +91,7 @@ textarea {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
-    padding: 0.2em 0;
+    padding: 0 0;
 }
 
 #container {
@@ -99,12 +99,13 @@ textarea {
 	box-sizing: border-box;
 	width: 70%;
 	margin: auto;
+	height: 99%;
 }
 
 #navbar {
-	width: 70%; /* Should be same width as content container */
+	width: 99%; /* Should be same width as content container */
 	position: fixed;
-	top: 0;	left: 15%; /* Left is 100-[content width]/2). */
+	top: 0; /* Left is 100-[content width]/2). */
 	opacity: 1;
 	z-index: 100;
 	-webkit-transition: all 1s ease;
@@ -125,7 +126,7 @@ nav ul:nth-of-type(1) {float: left;}
 nav ul:nth-of-type(2) {float: right;}
 
 nav ul li {
-	float: left;
+	/*float: left;*/
 	margin: 0;
 	padding: 8px;
 }
@@ -155,14 +156,66 @@ nav ul li a:hover {text-decoration: underline;}
 .fixednav ul li {display: block; float: none;}
 .fixednav ul:nth-of-type(2) li {float: none;}
 
+/*
+*SEARCH BAR
+*/
+
+input, select, textarea {
+                background: none repeat scroll 0 0 #fafafa;
+                border: 1px solid #eeeeee;
+                color: #5e5e5e;
+                display: block;
+                font-family: arial, sans-serif;
+                font-size: inherit;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+                margin: 0;
+        		margin-top: 1%;
+        		margin-bottom: 1%;
+                height: 40px;
+            }
+            
+#searchtext {
+        overflow: hidden;
+            }
+            
+a.search-submit-button {
+                background: none repeat scroll 0 0 #fafafa;
+                border-bottom: 1px solid #eeeeee;
+                border-right: 1px solid #eeeeee;
+                border-top: 1px solid #eeeeee;
+                color: #5e5e5e !important;
+                display: block;
+                float: right;
+                font-family: inherit;
+                font-size: 20px;
+                padding: 8px 10px;
+                text-align: center;
+                width: 45px;
+                box-sizing: border-box;
+                height: 40px;
+                margin-top: 0.9%;
+        		margin-bottom: 1%;
+            }
+        
+a.search-submit-button img{
+	margin-bottom: 10px;
+}
+
+/*
+*TIMELINE
+*/
 
 .app{
 	background-color: #ecf0f1; 
 	overflow: hidden;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	width: 70%;
+	width: 100%;
 	margin: auto;
+	height: 100%;
 }
 
 .app > .container{
@@ -287,6 +340,133 @@ nav ul li a:hover {text-decoration: underline;}
 	padding: 5px 0 0;
 	text-transform: uppercase;
 	font-weight: 600;
+}
+
+/*
+* FOOTER
+*/
+
+footer {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+footer .splitter {
+    height: 20px;
+}
+
+footer > ul {
+    list-style: none outside none;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+    padding: 25px 0;
+    position: relative;
+    width: 100%;
+}
+footer > ul li {
+    float: left;
+    padding: 20px 15px;
+    width: 33.3%;
+
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+footer > ul li:first-child {
+    padding-left: 0;
+}
+footer > ul li:nth-child(3) {
+    padding-right: 0;
+}
+footer > ul li .icon {
+    color: #999999;
+    float: left;
+    font-size: 50px;
+    line-height: 80px;
+}
+footer > ul li .text {
+    color: #848889;
+    font-size: 13px;
+    line-height: 20px;
+    /*margin-left: 105px;*/
+    position: relative;
+    text-align: justify;
+}
+.text h4 {
+    color: #848889;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.text a {
+    border-bottom: 1px dotted transparent;
+    color: #848889;
+    font-weight: bold;
+}
+.text a:hover {
+    border-color: #848889;
+}
+
+footer .bar {
+    background-color: #1E2629;
+    padding: 20px 0;
+}
+footer .bar-wrap {
+    font-size: 12px;
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+    width: 95%;
+}
+
+.social {
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+.social a {
+    color: #778888;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+.social .icon {
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 5px;
+    vertical-align: middle;
+
+    -webkit-transition: -webkit-transform .3s linear;
+    -moz-transition: -moz-transform .3s linear;
+    -ms-transition: -ms-transform .3s linear;
+    -o-transition:  -o-transform .3s linear;
+    transition: transform .3s linear;
+}
+.social a:hover  .icon {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.social .info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.social .info .follow {
+    display: block;
+}
+.social .info .num {
+    display: block;
+}
+.copyright {
+    color: #778888;
+    margin-top: 5px;
+    text-align: center;
 }
 
 /*
@@ -436,4 +616,46 @@ nav ul li a:hover {text-decoration: underline;}
 	#navbar{
 		display: none;
 	}
+	
+}
+
+@media screen and (max-width: 800px) {
+
+footer{
+	display: none;
+	}
+}
+
+@media screen and (max-width: 1000px){
+    .links, .social, .copyright{
+        float:none;
+        text-align:center;
+    }
+    .social {
+        position:relative;
+        margin:10px 0;
+    }
+    .links li {
+        display:inline-block;
+        float:none;
+    }
+    .bar {
+        position:relative;
+    }
+    .bar-wrap {
+        margin-bottom:0;
+    }
+}
+
+@media screen and (max-width: 835px)  {
+    footer > ul li {
+        float:none;
+        width:auto;
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    .links li {
+        margin-right:5px;
+    }
 }
