@@ -13,23 +13,58 @@ function showRestaurants()
         while ($row = mysql_fetch_assoc($query)) {
             $i++;
             ?>
-            <section class="entry" id="<?php echo($i); ?>" itemscope itemtype="http://schema.org/CreativeWork">
-                <div class="wrapper">
-                    <div class="header-row">
-                        <div class="content-name">
-                            <span class="name">*****</span>
-                        </div>
-                        <div class="content">
-                            <h3><?php echo($row['restaurantName']); ?></h3>
-                            <p>*Description of the restaurant*</p>
-                        </div>
-                        <div class="apiinplus">
-                            <aside class="image-area">
-                                *Here : the Instagram pictures*
-                            </aside>
-                            <ul class="interactions">
-                                <li>
-                                    <span class="name">Where to find us ?</span>
+            <section id="<?php echo($i); ?>">
+            	<nav>
+					<ul>
+						<li><a href="index.php?page=mainPage">Home</a></li>
+						<li><a href="index.php?page=aboutSite">About</a></li>
+						<li><a href="index.php?page=aboutUs">Team</a></li>
+						<li><a href="index.php?page=contactUs">Contact</a></li>
+						<li><a href="#">Logout</a></li>
+						<li>
+							<form method="get" action="/search" id="search">
+  								<input name="q" type="text" size="40" placeholder="Search..." />
+							</form>
+						</li>
+					</ul>
+				</nav>
+				
+            	<div id="container">
+
+                        <h1><?php echo($row['restaurantName']); ?></h1>
+                        
+                        <div id="rating">
+  
+  						<div class="rating">
+							<input type="radio" id="star1" name="rating" value="5" /><label for="star1" title="Sucks big time"> </label>
+							<input type="radio" id="star2" name="rating" value="4" /><label for="star2" title="Kinda bad"> </label>
+							<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh"> </label>
+							<input type="radio" id="star4" name="rating" value="2" /><label for="star4" title="Pretty good"> </label>
+    						<input type="radio" id="star5" name="rating" value="1" /><label for="star5" title="Rocks!"> </label>
+						</div>
+  
+						<!--<strong class="choice"> </strong>-->
+						</div>
+
+<script>
+            
+$(':radio').change(
+  function(){
+    $('.choice').text( this.value + ' stars' );
+      var ratingNum = this.value;
+	  console.log(ratingNum);
+      
+  } 
+)
+</script>
+
+<img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo"/>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <ul class="interactions">
+                            <li>
+                                <span class="name">Where to find us ?</span>
                                     <script>
                                         function initialize<?php echo($i); ?>() {
                                             var myLatlng = new google.maps.LatLng(<?php echo($row['restaurantGPSX']);?>, <?php echo($row['restaurantGPSY']);?>);
@@ -48,18 +83,16 @@ function showRestaurants()
                                         }
                                         google.maps.event.addDomListener(window, 'load', initialize<?php echo($i); ?>);
                                     </script>
-                                    <span class="value">
+                                	<span class="value">
                                         <div id="map_canvas<?php echo($i); ?>" class="map_canvas"></div>
                                     </span>
-                                </li>
-                                <li>
-                                    <span class="name">Suggestions ?</span>
-                                    <span class="value"><img src="" alt="Enveloppe"/></span>
-                                </li>
-                            </ul>
+                            </li>
+                            <li>
+                                <span class="name">Suggestions ?</span>
+                                <span class="value"><img src="img/email.png" alt="Enveloppe"/></span>
+                            </li>
+                        </ul>
                         </div>
-            		</div>
-            	</div>
             </section>
 
         <?php
@@ -81,32 +114,15 @@ function showRestaurants()
 <body>
 
 <section id="screen1">
-
-	<nav>
-		<ul>
-			<li><a href="index.php?page=mainPage">Home</a></li>
-			<li><a href="index.php?page=aboutSite">About</a></li>
-			<li><a href="index.php?page=aboutUs">Team</a></li>
-			<li><a href="index.php?page=contactUs">Contact</a></li>
-			<li><a href="#">Logout</a></li>
-			<li>
-				<form method="get" action="/search" id="search">
-  					<input name="q" type="text" size="40" placeholder="Search..." />
-				</form>
-			</li>
-		</ul>
-	</nav>
-
-<p>
+	<div id="container">
 	<?php
     showRestaurants();
 	?>
-</p>
-	
-
+	</div>
 </section>
 	
 <section id="screen2"></section>
+
 <section id="screen3"></section>
 
 <footer>
@@ -132,6 +148,7 @@ function showRestaurants()
 	</script>
 	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>
