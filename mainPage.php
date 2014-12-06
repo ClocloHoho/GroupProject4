@@ -31,7 +31,7 @@ function showRestaurants()
 				
             	<div id="container">
 
-                        <h1><?php echo($row['restaurantName']); ?></h1>
+                        <h1><a href="index.php?page=pageRestaurant"><?php echo($row['restaurantName']); ?></a></h1>
                         
                         <div id="rating">
   
