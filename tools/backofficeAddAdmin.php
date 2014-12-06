@@ -24,7 +24,7 @@ if ($rows!=0) {
 
 // mysql request
 // TODO preven SQL injections
-$query='INSERT INTO user(userPassword, userName, useremail, userIsAdmin) VALUES ("'.
+$query='INSERT INTO USERS (password, userName, email, isAdmin) VALUES ("'.
     $password.'", "'.$_POST["userName"].'", "'.$_POST["email"].'", 1)';
 $inserts=mysql_query($query);
 if(!$inserts)

@@ -7,11 +7,13 @@ if(!$isAdmin){
 }
 
 // TODO prevent SQL injections
-$insert="INSERT INTO `restaurants` (restaurantName, restaurantGPSX, restaurantGPSY)
+$insert="INSERT INTO `restaurants` (name, GPSX, GPSY, description, tag)
 VALUES
 ('$_POST[restaurantName]',
   '$_POST[restaurantGPSX]',
-  '$_POST[restaurantGPSY]')";
+  '$_POST[restaurantGPSY]',
+  '$_POST[description]',
+  '$_POST[tag]')";
 
 if (!mysql_query($insert, $dbhandle))
   {

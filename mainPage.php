@@ -13,7 +13,7 @@ function showRestaurants()
         while ($row = mysql_fetch_assoc($query)) {
             $i++;
             ?>
-            <section id="<?php echo($i); ?>">
+            <section id="screen<?php echo($i+1); ?>"><div id="container">
             	<nav>
 					<ul>
 						<li><a href="index.php?page=mainPage">Home</a></li>
@@ -31,7 +31,7 @@ function showRestaurants()
 				
             	<div id="container">
 
-                        <h1><a href="index.php?page=pageRestaurant"><?php echo($row['restaurantName']); ?></a></h1>
+                        <h1><a href="index.php?page=pageRestaurant"><?php echo($row['name']); ?></a></h1>
                         
                         <div id="rating">
   
@@ -60,14 +60,14 @@ $(':radio').change(
 
 <img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo"/>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><?php echo($row['description']); ?></p>
 
                         <ul class="interactions">
                             <li>
                                 <span class="name">Where to find us ?</span>
                                     <script>
                                         function initialize<?php echo($i); ?>() {
-                                            var myLatlng = new google.maps.LatLng(<?php echo($row['restaurantGPSX']);?>, <?php echo($row['restaurantGPSY']);?>);
+                                            var myLatlng = new google.maps.LatLng(<?php echo($row['GPSX']);?>, <?php echo($row['GPSY']);?>);
                                             var mapCanvas = document.getElementById('map_canvas<?php echo($i); ?>');
                                             var mapOptions = {
                                                 center: myLatlng,
@@ -83,9 +83,9 @@ $(':radio').change(
                                         }
                                         google.maps.event.addDomListener(window, 'load', initialize<?php echo($i); ?>);
                                     </script>
-                                	<span class="value">
+                                	<span class="value"><center>
                                         <div id="map_canvas<?php echo($i); ?>" class="map_canvas"></div>
-                                    </span>
+                                    </center></span>
                             </li>
                             <li>
                                 <span class="name">Suggestions ?</span>
@@ -93,7 +93,7 @@ $(':radio').change(
                             </li>
                         </ul>
                         </div>
-            </section>
+            </div></section>
 
         <?php
         }
@@ -113,17 +113,17 @@ $(':radio').change(
 
 <body>
 
-<section id="screen1">
-	<div id="container">
+<!--<section id="screen1">
+	<div id="container">-->
 	<?php
     showRestaurants();
-	?>
+	?><!--
 	</div>
 </section>
-	
+
 <section id="screen2"></section>
 
-<section id="screen3"></section>
+<section id="screen3"></section>-->
 
 <footer>
 	<a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">
