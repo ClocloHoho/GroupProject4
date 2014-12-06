@@ -46,7 +46,7 @@ nav li a {
 }
 
 section {
-	height: 100vh;
+	height: 100%;
 }
 
 /* Screens Settings */
@@ -59,7 +59,7 @@ section {
 */
 
 #container{
-	padding-top: 5%;
+	padding-top: 2%;
 }
 
 h1{
@@ -74,7 +74,7 @@ p{
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: 100;
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 /*
@@ -153,22 +153,28 @@ p{
 */
 
 .rating {
+<<<<<<< HEAD
   
 	font-weight:bold;
 	margin-left:500px;
 	width:220px;
 	height:40px
+=======
+  font-weight: bold;
+	/*margin-left:440px;*/
+	width:55%;
+	height:40px;
+	text-align: center;
+	margin: 15px;
+>>>>>>> origin/master
 	
 }
-
 
 .rating:not(:checked) > input {
     position:absolute;
     top:-9999px;
     clip:rect(0,0,0,0);
 }
-
-
 
 .rating:not(:checked) > label {
     float:right;
@@ -177,7 +183,7 @@ p{
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:200%;
+    font-size:150%;
     line-height:1.2;
     color:#ddd;
     text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
@@ -214,8 +220,23 @@ p{
 }
 
 /*
+*IMAGE
+*/
+
+img#admin_photo
+{
+	width: 20%;
+	height: 20;
+	margin-bottom: 10px;
+}
+
+/*
 *FOOTER
 */
+footer{
+	margin-top: 20px;
+}
+
 #terms{
 	font-size: 10px;
 	font-family: 'Roboto', Arial, sans-serif;
@@ -242,8 +263,11 @@ p{
 
 }
 
+<<<<<<< HEAD
 
 /* Some description styling */
+=======
+>>>>>>> origin/master
 p{
 
 }
@@ -251,7 +275,7 @@ p{
 /* RSS styling */
 
 #rssFeed{
-	margin-top:-510px;
+	margin-top:-800px;
 	float:left;
 	height:330px;
 	overflow-y: scroll;
