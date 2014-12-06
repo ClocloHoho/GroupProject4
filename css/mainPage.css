@@ -146,7 +146,6 @@ p{
 	font-size: 0.7em;
 	padding: 5px 0 0;
 	text-transform: uppercase;
-	padding-left: 30%;
 	padding-bottom: 2%;
 }
 
@@ -247,7 +246,7 @@ footer{
 
 .map_canvas{
     height: 220px;
-    width:  60%;
+    width:  50%;
 }
 
 @media only screen and (max-width: 800px) {

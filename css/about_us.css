@@ -118,7 +118,16 @@ footer{
 
     
 @media only screen and (max-width: 800px) {
-#search{display: none;}
+	#search{display: none;}
+	
+	.rating {
+	width:60%;
+}
+
+#container{
+	width: 100%;
+	color: #34495E;
+}
 }
 
 @media only screen and (max-width: 520px) {
@@ -126,9 +135,30 @@ footer{
 	nav li {
 		padding: 24px 4px;
 	}
-
+	
 	nav li a {
 		font-size: 14px;
 	}
+.rating {
+	width:65%;
 
+}
+
+.aboutus{
+	width: 100%;
+}
+}
+
+@media only screen and (max-width: 300px) {
+
+	nav li a {
+		font-size: 10px;	
+	}
+	
+	.rating:not(:checked) > label {
+    font-size:100%;
+	}
+	
+	.rating {
+	width:70%;
 }

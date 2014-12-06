@@ -55,3 +55,39 @@ footer{
 	font-style: none;
 	color: #757575;
 }
+
+@media only screen and (max-width: 800px) {
+	#search{display: none;}
+	
+	.rating {
+	width:60%;
+}
+}
+
+@media only screen and (max-width: 520px) {
+
+	nav li {
+		padding: 24px 4px;
+	}
+	
+	nav li a {
+		font-size: 14px;
+	}
+.rating {
+	width:65%;
+
+}
+
+@media only screen and (max-width: 300px) {
+
+	nav li a {
+		font-size: 10px;	
+	}
+	
+	.rating:not(:checked) > label {
+    font-size:100%;
+	}
+	
+	.rating {
+	width:70%;
+}

@@ -152,22 +152,17 @@ p{
 *RATING
 */
 
-.rating {
-<<<<<<< HEAD
-  
+.rating {  
 	font-weight:bold;
 	margin-left:500px;
 	width:220px;
 	height:40px
-=======
-  font-weight: bold;
+  	font-weight: bold;
 	/*margin-left:440px;*/
 	width:55%;
 	height:40px;
 	text-align: center;
 	margin: 15px;
->>>>>>> origin/master
-	
 }
 
 .rating:not(:checked) > input {
@@ -246,32 +241,6 @@ footer{
 	color: #757575;
 }
 
-
-@media only screen and (max-width: 800px) {
-#search{display: none;}
-}
-
-@media only screen and (max-width: 520px) {
-
-	nav li {
-		padding: 24px 4px;
-	}
-
-	nav li a {
-		font-size: 14px;
-	}
-
-}
-
-<<<<<<< HEAD
-
-/* Some description styling */
-=======
->>>>>>> origin/master
-p{
-
-}
-
 /* RSS styling */
 
 #rssFeed{
@@ -308,4 +277,42 @@ color:blue
 
 #descriptionStyleRSS{
 color:blue;
+}
+
+@media only screen and (max-width: 800px) {
+	#search{display: none;}
+	
+	.rating {
+	width:60%;
+}
+}
+
+@media only screen and (max-width: 520px) {
+
+	nav li {
+		padding: 24px 4px;
+	}
+	
+	nav li a {
+		font-size: 14px;
+	}
+.rating {
+	width:65%;
+
+}
+}
+
+@media only screen and (max-width: 300px) {
+
+	nav li a {
+		font-size: 10px;	
+	}
+	
+	.rating:not(:checked) > label {
+    font-size:100%;
+	}
+	
+	.rating {
+	width:70%;
+}
 }
