@@ -9,7 +9,7 @@ if(!(isset($_GET["username"]))){
 
 // mysql request
 // TODO preven SQL injections
-$query = mysql_query("SELECT * FROM USER WHERE userName='".$_GET["username"]."'");
+$query = mysql_query("SELECT * FROM USERS WHERE userName='".$_GET["username"]."'");
 $rows = mysql_num_rows($query);
 if ($rows!=0)
 {
