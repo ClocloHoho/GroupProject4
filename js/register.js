@@ -1,3 +1,6 @@
+RegisterFormUserEmailOk=false;
+RegisterFormUserPasswordOk=false;
+
 function registerFormCheckUsername(){
     document.getElementById("registerFormUsername").className = "registerFormField registerFormFieldLoading input w100 mt10";
     var xhr = new XMLHttpRequest();
