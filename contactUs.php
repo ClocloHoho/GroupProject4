@@ -47,7 +47,7 @@
     			$sr = true;
 			}
 		?>
-			<ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">
+			<!--<ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">
         		<li id="info">There were some problems with your form submission:</li>
    			</ul>
    			<?php 
@@ -61,7 +61,7 @@
         		endforeach;
     			endif;
     		?>
-   			<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>
+   			<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>-->
    			
 		<!-- Form -->
 		<form id="contact-form" action="index.php?page=process" method="post">
