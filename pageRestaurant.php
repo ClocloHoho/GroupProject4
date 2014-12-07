@@ -105,6 +105,8 @@ $(':radio').change(
 	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
 
+<<<<<<< HEAD
+
 <!-- RSS feed -->
 
 
