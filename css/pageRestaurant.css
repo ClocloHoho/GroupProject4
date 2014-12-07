@@ -27,6 +27,7 @@ body {
 }	
 
 /* Navigation Settings */
+
 nav {
 	position: relative;
 	bottom: 0;
@@ -221,7 +222,7 @@ p{
 img#admin_photo
 {
 	width: 20%;
-	height: 20;
+	height: 20%;
 	margin-bottom: 10px;
 }
 
@@ -244,51 +245,70 @@ footer{
 /* RSS styling */
 
 #rssFeed{
-	margin-top:-800px;
 	float:left;
-	height:330px;
+	margin-top: -650px;
+	margin-left: 2%;
+	height: 500px;
 	overflow-y: scroll;
-	background-color:yellow;
 	display:block;
-	width:370px;
-	margin-left:4px;
-	
+	width:25%;
+	font-family: 'Yanone Kaffeesatz', Arial, sans-serif;	
 }
 
 #feedTitle{
-color: #4183D7;
 text-transform: uppercase;
 text-align:center;
-padding-bottom:10px;
+margin-bottom: 10px;
 }
 
 #titleStyleRSS{
-	color:red;
+	margin: 0;
+	color: #6C7A89;
 }
 
-hr{
-padding:10px;
-background:purple;
+#titleStyleRSS a h3{
+	margin: 0;
+	text-decoration: none;
+	color: #6C7A89;
+}
+
+#titleStyleRSS h3{
+	margin-top: 10px;
+	color: #6C7A89;
+	}
+
+#descriptionStyleRSS{
+	font-weight: 100;
+	font-size: 0.8em;
+	color: #000000;
+	text-align: justify;
+}
+
+#descriptionStyleRSS small a{
+	color: #000000;
+	text-decoration: underline;
 }
 
 #pubStyleRSS{
-color:blue
+	font-size: 11px;
+	font-weight: 100;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #ABB7B7;
 }
 
-#descriptionStyleRSS{
-color:blue;
-}
 
 @media only screen and (max-width: 800px) {
-	#search{display: none;}
+	#search{
+		display: none;
+	}
 	
 	.rating {
-	width:60%;
-}
+		width:60%;
+	}
 }
 
 @media only screen and (max-width: 520px) {
-
 	nav li {
 		padding: 24px 4px;
 	}
@@ -296,23 +316,21 @@ color:blue;
 	nav li a {
 		font-size: 14px;
 	}
-.rating {
+	.rating {
 	width:65%;
-
-}
+	}
 }
 
 @media only screen and (max-width: 300px) {
-
 	nav li a {
 		font-size: 10px;	
 	}
 	
 	.rating:not(:checked) > label {
-    font-size:100%;
+    	font-size:100%;
 	}
 	
 	.rating {
-	width:70%;
-}
+		width:70%;
+	}
 }
