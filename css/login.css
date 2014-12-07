@@ -181,11 +181,24 @@ content: "";
 margin-top: 100px;
 }
 .registerFormFieldLoading{
-    background: url(../img/ico_loading.gif) no-repeat scroll 160px 3px/15px;
+    background: url(../img/ico_loading.gif);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 15px 15px;
+    background-position: right center;
+}
 }
 .registerFormFieldOk{
-    background: url(../img/ok.png) no-repeat scroll 160px 3px/15px;
+    background: url(../img/ok.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 15px 15px;
+    background-position: right center;
 }
 .registerFormFieldKo{
-    background: url(../img/ko.png) no-repeat scroll 160px 3px/15px;
+    background: url(../img/ko.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 15px 15px;
+    background-position: right center;
 }
