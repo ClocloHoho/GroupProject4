@@ -90,7 +90,7 @@ CREATE TABLE `users` (
   `isAdmin` bit(1) DEFAULT b'0',
   PRIMARY KEY (`userID`),
   UNIQUE KEY `iduser_UNIQUE` (`userID`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (12,'$2y$10$yXd9nlqJO2A3nX4bdhqFae3tpykxERvujyzfffP0Enc.f02kDpj8a','admin','admin@admin.admin',''),(13,'$2y$10$JtgYDJROuoTgfWukjIXjWOQm6T/rluJJSVhRFn9c04q/gTdAl3sNW','admin2','admin2@admin2',''),(14,'$2y$10$SrbZMI7B/O9UA64fEr7xvuSvWqjAIJoA0meFCCDJws7Au0QOxX6/O','notAdmin','notAdmin@notAdmin','\0');
+INSERT INTO `users` VALUES (12,'$2y$10$yXd9nlqJO2A3nX4bdhqFae3tpykxERvujyzfffP0Enc.f02kDpj8a','admin','admin@admin.admin',''),(13,'$2y$10$JtgYDJROuoTgfWukjIXjWOQm6T/rluJJSVhRFn9c04q/gTdAl3sNW','admin2','admin2@admin2',''),(14,'$2y$10$SrbZMI7B/O9UA64fEr7xvuSvWqjAIJoA0meFCCDJws7Au0QOxX6/O','notAdmin','notAdmin@notAdmin','\0'),(15,'$2y$10$gjhpYizV5I7i9THCwV8bQenP7vwlZzNc5q4Hfnq3DRCYSE/dsUiAy','Bob','bob@bob.com','\0'),(16,'$2y$10$cybL5/hwYqMXv6frPTTJmO5UCnS3q9mHjmBlUmhjFrQjqISf6ymlq','admin','admin@admin.admin','\0'),(17,'$2y$10$7GYhKKIk7vRsUVwV35CORelO/9VfX6Uz1dgo/mkF33gb1K9oO5FZm','add','add@add','\0');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -112,4 +112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-06 23:17:40
+-- Dump completed on 2014-12-08 22:14:52
