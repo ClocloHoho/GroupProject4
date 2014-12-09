@@ -3,10 +3,20 @@
 		header('Location: ../index.php');
 	}
 ?>
-
-<form action="tools/backofficeAddRestaurant.php" method="post" class="loginForm">
-	<input type="text" name="restaurantName" placeholder="Restaurant Name" class="loginFormFields">
-	<input type="text" name="restaurantGPSX" placeholder="Restaurant GPS X" class="loginFormFields">
-	<input type="text" name="restaurantGPSY" placeholder="Restaurant GPS Y" class="loginFormFields">
-	<input type="submit" value="Add" class="loginSubmitButton">
-</form>
+<table>
+    <?php $query = mysql_query("SELECT * FROM users");
+    if($query === FALSE) {
+        die(mysql_error());
+    }
+    $rows = mysql_num_rows($query);
+    if ($rows != 0) {
+        while ($row = mysql_fetch_assoc($query)) {
+            ?>
+            <tr>
+                <td><?php echo($row['userName']); ?></td>
+                <td><a href="/tools/backofficeDeleteUser.php?userID=<?php echo($row['userID']); ?>">Delete user</a></td>
+            </tr>
+        <?php
+        }
+    }?>
+</table>

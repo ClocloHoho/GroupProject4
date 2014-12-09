@@ -91,7 +91,11 @@ $html = "";
 $url = "http://cork.gaycities.com/restaurants/rss.xml";
 
 $xml = simplexml_load_file($url);
-for($i = 2; $i < 6; $i++){
+for($i = 0; $i < 7; $i++){
+
+    if($i==1){
+        $i=$i+3;
+    }
 	
 	$title = $xml->channel->item[$i]->title;
 	$link = $xml->channel->item[$i]->link;

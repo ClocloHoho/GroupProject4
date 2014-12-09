@@ -6,7 +6,7 @@ function showRestaurants()
     
     $query = mysql_query("SELECT * FROM RESTAURANTS");
     if($query === FALSE) {
-    	die(mysql_error()); // TODO: better error handling
+    	die(mysql_error());
     }
     $rows = mysql_num_rows($query);
     if ($rows != 0) {
