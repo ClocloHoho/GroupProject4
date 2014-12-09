@@ -19,5 +19,5 @@ if (!mysql_query($insert, $dbhandle))
   {
   die('Error: ' . mysql_error());
   }
-echo "1 record added";
+header('Location: ../index.php?page=backofficeHomePage');
 ?>
