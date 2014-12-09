@@ -21,7 +21,7 @@
 			<li><a href="index.php?page=aboutSite">About</a></li>
 			<li><a href="index.php?page=aboutUs">Team</a></li>
 			<li><a href="index.php?page=contactUs">Contact</a></li>
-			<li><a href="/tools/logout.php">Logout</a></li>
+			<li><a href="#">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">
   					<input name="q" type="text" size="40" placeholder="Search..." />
@@ -66,7 +66,7 @@
 		<!-- Form -->
 		<form id="contact-form" action="index.php?page=process" method="post">
 				<label for="name">Name <span class="required">*</span></label>
-				<input id="name" name="name" value="" placeholder="Please enter your name" type="text" tabindex="1" required="required" autofocus="autofocus">
+				<input id="name" name="name" value="" placeholder="Please enter your name" type="text" tabindex="1" required="required" autofocus="autofocus"><br />
 				
 				<label for="email">Email <span class="required">*</span></label>
         		<input type="email" id="email" name="email" value="" placeholder="Please enter your mail" required="required" />
