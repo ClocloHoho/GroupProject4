@@ -1,38 +1,62 @@
 <?php
 include("init.php");
+$oldRating=0;
 //TODO inform the user request failed
 
 // If one of the fields is missing, no need to go further
-if(!(isset($_POST["idUser"]) && isset($_POST["idRestaurant"]) && isset($_POST["rate"]))){
+if(!(isset($_SESSION['userID']) && isset($_GET["restaurantID"]) && isset($_GET["rating"]))){
 	header('Location: ../index.php?failedRating=true');
 	die();
 }
 
-// mysql request
-// TODO preven SQL injections
-$query='INSERT INTO individualratings(ratingIdUser, ratingIdRestaurant, rating) VALUES ("'.
-    $_POST["idUser"].'", "'.$_POST["idRestaurant"].'", "'.$_POST["rate"].'")';
-$inserts=mysql_query($query);
-if(!$inserts)
+$queryCheckIfAlreadyRated = "SELECT individualRatingID, rating FROM individualratings WHERE ratingIdUser=".$_SESSION['userID'].
+    " AND ratingIdRestaurant=".$_GET["restaurantID"];
+$resultCheckIfAlreadyRated = mysql_query($queryCheckIfAlreadyRated);
+$rowsCheckIfAlreadyRated = mysql_num_rows($resultCheckIfAlreadyRated);
+if ($rowsCheckIfAlreadyRated!=0)
 {
-    $message = 'Invalid query:' .mysql_error()."</br>";
-    $message .= 'Whole query ' .$query;
-    die($message);
-    //header('Location: ../index.php?failedRegister=true');
-}else{
-}
+    $oldRatingRow=mysql_fetch_assoc($resultCheckIfAlreadyRated);
+    $oldRating=$oldRatingRow['rating'];
+    $differenceRating=$_GET["rating"]-$oldRating;
+    $queryUpdateindividualRatings='UPDATE individualratings SET rating = '.$_GET["rating"].
+        ' WHERE individualRatingID = '.$oldRatingRow['individualRatingID'];
+    $resultUpdateindividualRatings=mysql_query($queryUpdateindividualRatings);
+    if (!$resultUpdateindividualRatings) {
+        $message = 'Invalid query:' . mysql_error() . "</br>";
+        $message .= 'Whole query ' . $queryUpdateindividualRatings;
+        die($message);
+    } else {
+    }
+    $queryUpdateRestaurantRating='UPDATE restaurants SET totalRating = totalRating + '.$differenceRating.
+        ', rating= ((totalRating)/(numberRatings)) WHERE restaurantID = \''.$_GET["restaurantID"].'\'';
+    $resultUpdateRestaurantRating=mysql_query($queryUpdateRestaurantRating);
+    if(!$resultUpdateRestaurantRating)
+    {
+        $message = 'Invalid query:' .mysql_error()."</br>";
+        $message .= 'Whole query ' .$queryUpdateRestaurantRating;
+        die($message);
+        //header('Location: ../index.php?failedRegister=true');
+    }
 
-$query2='UPDATE restaurants SET restaurantTotalRating = restaurantTotalRating + '.$_POST["rate"].
-    ', RestaurantNumberRatings = RestaurantNumberRatings +1, restaurantRating= ((restaurantTotalRating + '.$_POST["rate"].
-    ')/(RestaurantNumberRatings +1)) WHERE idrestaurants = \''.$_POST["idRestaurant"].'\'';
-$inserts2=mysql_query($query2);
-if(!$inserts2)
-{
-    $message = 'Invalid query:' .mysql_error()."</br>";
-    $message .= 'Whole query ' .$query2;
-    die($message);
-    //header('Location: ../index.php?failedRegister=true');
-}else{
-    header('Location: ../index.php');
+}else {
+    $query = 'INSERT INTO individualratings(ratingIdUser, ratingIdRestaurant, rating) VALUES ("' .
+        $_SESSION['userID'] . '", "' . $_GET["restaurantID"] . '", "' . $_GET["rating"] . '")';
+    $inserts = mysql_query($query);
+    if (!$inserts) {
+        $message = 'Invalid query:' . mysql_error() . "</br>";
+        $message .= 'Whole query ' . $query;
+        die($message);
+    }
+    $queryUpdateRestaurantRating='UPDATE restaurants SET totalRating = totalRating + '.$_GET["rating"].
+        ', numberRatings = numberRatings +1, rating= ((totalRating)/(numberRatings)) WHERE restaurantID = \''.
+        $_GET["restaurantID"].'\'';
+    $resultUpdateRestaurantRating=mysql_query($queryUpdateRestaurantRating);
+    if(!$resultUpdateRestaurantRating)
+    {
+        $message = 'Invalid query:' .mysql_error()."</br>";
+        $message .= 'Whole query ' .$queryUpdateRestaurantRating;
+        die($message);
+        //header('Location: ../index.php?failedRegister=true');
+    }
 }
 ?>

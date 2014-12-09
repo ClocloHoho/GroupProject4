@@ -36,27 +36,21 @@ function showRestaurants()
                         <div id="rating">
   
   						<div class="rating">
-							<input type="radio" id="star1" name="rating" value="5" /><label for="star1" title="Sucks big time"> </label>
-							<input type="radio" id="star2" name="rating" value="4" /><label for="star2" title="Kinda bad"> </label>
-							<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh"> </label>
-							<input type="radio" id="star4" name="rating" value="2" /><label for="star4" title="Pretty good"> </label>
-    						<input type="radio" id="star5" name="rating" value="1" /><label for="star5" title="Rocks!"> </label>
+							<input type="radio" id="star1<?php echo($row['restaurantID']); ?>" name="rating<?php echo($row['restaurantID']); ?>" value="5" <?php if($row['rating']==5){ echo("checked"); } ?>
+                                onclick="rate(5,<?php echo($row['restaurantID']); ?>)"/><label for="star1<?php echo($row['restaurantID']); ?>" title="Sucks big time"> </label>
+							<input type="radio" id="star2<?php echo($row['restaurantID']); ?>" name="rating<?php echo($row['restaurantID']); ?>" value="4" <?php if($row['rating']==4){ echo("checked"); } ?>
+                                   onclick="rate(4,<?php echo($row['restaurantID']); ?>)"/><label for="star2<?php echo($row['restaurantID']); ?>" title="Kinda bad"> </label>
+							<input type="radio" id="star3<?php echo($row['restaurantID']); ?>" name="rating<?php echo($row['restaurantID']); ?>" value="3" <?php if($row['rating']==3){ echo("checked"); } ?>
+                                   onclick="rate(3,<?php echo($row['restaurantID']); ?>)"/><label for="star3<?php echo($row['restaurantID']); ?>" title="Meh"> </label>
+							<input type="radio" id="star4<?php echo($row['restaurantID']); ?>" name="rating<?php echo($row['restaurantID']); ?>" value="2" <?php if($row['rating']==2){ echo("checked"); } ?>
+                                   onclick="rate(2,<?php echo($row['restaurantID']); ?>)"/><label for="star4<?php echo($row['restaurantID']); ?>" title="Pretty good"> </label>
+    						<input type="radio" id="star5<?php echo($row['restaurantID']); ?>" name="rating<?php echo($row['restaurantID']); ?>" value="1" <?php if($row['rating']==1){ echo("checked"); } ?>
+                                   onclick="rate(1,<?php echo($row['restaurantID']); ?>)"/><label for="star5<?php echo($row['restaurantID']); ?>" title="Rocks!"> </label>
 						</div>
   
 						<!--<strong class="choice"> </strong>-->
 						</div>
 
-<script>
-            
-$(':radio').change(
-  function(){
-    $('.choice').text( this.value + ' stars' );
-      var ratingNum = this.value;
-	  console.log(ratingNum);
-      
-  } 
-)
-</script>
 
 <img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo"/>
 
@@ -109,6 +103,7 @@ $(':radio').change(
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/rate.js"></script>
 </head>
 
 <body>
