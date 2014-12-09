@@ -21,7 +21,7 @@
 			<li><a href="index.php?page=aboutSite">About</a></li>
 			<li><a href="index.php?page=aboutUs">Team</a></li>
 			<li><a href="index.php?page=contactUs">Contact</a></li>
-			<li><a href="#">Logout</a></li>
+			<li><a href="/tools/logout.php">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">
   					<input name="q" type="text" size="40" placeholder="Search..." />
