@@ -6,7 +6,6 @@ if(!$isAdmin){
 	header('Location: ../index.php');
 }
 
-// TODO prevent SQL injections
 $insert="INSERT INTO `restaurants` (name, GPSX, GPSY, description, tag)
 VALUES
 ('$_POST[restaurantName]',
