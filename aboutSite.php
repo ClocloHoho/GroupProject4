@@ -23,13 +23,19 @@
 		</ul>
 	</nav> 
 <section id="screen1">
-    <h1> Feeling Hungry? Look no further</h1>
+<div id="text">
+    <h1> Feeling Hungry ? Look no further</h1>
 
-    <h2>Here you can :</h2>
-   	<h2> Search for restaurant </h2>
-    <h2>View location</h2>
-    <h2>Read reviews from other customers </h2>
-    <h2>Add your own review</h2>
+    <h2>History of the webiste</h2>
+	<p>The website was created by Web Development Year 3  students for a group project in Cork Institute of Technology. Four students got together and shared their amazing ideas to design and develop Eat in Cok website. </p>
+   	<h2>The purpose</h2>
+   	<p>Eat in Cork provides restaurant reviews for hungry customers ! If you are happy with your dinner, say it to the world ! We’ll help you with that ! Just select the stars and leave a comment to help other hungry customers find their perfect restaurant!</p>
+    <h2>Cork City</h2>
+    <p>Since the City was founded by St Finbarr over 1,000 years ago it has grown from a trading merchant city to a cosmopolitan vibrant 21st century city of today.
+The city, situated on the banks of the river Lee, is home to 123,000 people. There is 25,000students from 2 main third level education institutes - University College Cork and Cork Institute of Technology. It is located on the South West coast of Ireland and is the 2nd largest city in the Republic of Ireland. The area of the city is 3,731 hectares.
+Enough space to place a lot of delicious restaurants !</p>
+
+</div>
 </section>
 <footer>
 	<a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">

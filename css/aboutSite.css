@@ -52,7 +52,7 @@ nav li a {
 }
 
 section {
-	height: 100%;
+	height: 100vph;
 }
 
 /*
@@ -86,6 +86,30 @@ section {
 #search input[type="text"]:focus {
     width: 200px;
     }
+    
+/*
+*CONTAINER
+*/
+
+#text{
+padding: 40px;
+}
+
+h1{
+	font-size: 3em;
+}
+
+h2{
+	padding: 10px;
+	font-size: 2em;
+}
+
+p{
+	text-align: justify;
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1em;
+}
     
 /*
 *FOOTER
@@ -125,6 +149,18 @@ footer{
 
 }
 
+h1{
+	font-size: 1em;
+}
+h2{
+	font-size: 0.8em;
+}
+p{
+	font-size: 0.6em;
+}
+
+}
+
 @media only screen and (max-width: 300px) {
 
 	nav li a {
@@ -137,4 +173,9 @@ footer{
 	
 	.rating {
 	width:70%;
+}
+
+p{
+	text-align: center;
+}
 }

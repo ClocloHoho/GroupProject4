@@ -110,8 +110,7 @@ for($i = 0; $i < 7; $i++){
 }
 echo $html;
 ?>
-
-<section>
+</section>
 
 <footer>
 	<a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">
@@ -136,7 +135,5 @@ echo $html;
 	</script>
 	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
-
-</section>
 </body>
 </html>
