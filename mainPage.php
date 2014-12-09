@@ -57,7 +57,7 @@ function showRestaurants()
 <p><?php echo($row['description']); ?></p>
 
                         <ul class="interactions">
-                            <li>
+                            <!--<li>
                                 <span class="name">Where to find us ?</span>
                                     <script>
                                         function initialize<?php echo($i); ?>() {
@@ -80,11 +80,11 @@ function showRestaurants()
                                 	<span class="value"><center>
                                         <div id="map_canvas<?php echo($i); ?>" class="map_canvas"></div>
                                     </center></span>
-                            </li>
-                            <li>
+                            </li>-->
+                            <!--<li>
                                 <span class="name">Suggestions ?</span>
                                 <span class="value" id="mail"><img src="img/email.png" alt="Enveloppe"/></span>
-                            </li>
+                            </li>-->
                         </ul>
                         </div>
             </div></section>

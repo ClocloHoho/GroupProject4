@@ -94,7 +94,10 @@ section {
 	width:95%;
 	margin:0 auto;
 	position:relative;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
+
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
