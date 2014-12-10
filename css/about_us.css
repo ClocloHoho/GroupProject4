@@ -11,16 +11,84 @@ body {
 
 #screen1 {	
 	background: #34495E;
+	height:750px;
 }
 
 section{
 	height: 100%;
 }
 
-.aboutus{
-width: 48%;
-padding-top: 3%;
+.aboutusGirls{
+width:50%;
+padding-top:50px;
 float:left;
+
+}
+
+.aboutusBoys{
+float:right;
+width:50%;
+padding-top:100px;
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 520px){
+
+
+#screen1 {	
+	background:#34495E;
+	height:1650px;
+}
+
+	.aboutusGirls{
+margin-top:5px;
+width:70%;
+padding-top:50px;
+padding-right:60px;
+margin-left:120px;
+text-align:center;
+
+}
+
+.aboutusBoys{
+margin-top:5px;
+width:50%;
+padding-right:40px;
+padding-top:20px;
+margin-left:120px;
+
+}
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 380px){
+
+
+#screen1 {	
+	background: #34495E;
+	height:1700px;
+	text-align:center;
+}
+
+	.aboutusGirls{
+margin-top:5px;
+width:100%;
+padding-top:50px;
+padding-right:60px;
+margin-left:40px;
+
+}
+
+.aboutusBoys{
+margin-top:5px;
+width:70%;
+padding-right:60px;
+padding-top:50px;
+margin-left:120px;
+
+}
+
 }
 
 .name{
