@@ -1,0 +1,192 @@
+
+
+Skip to content
+Using Cork Institute of Technology Mail with screen readers
+Click here to enable desktop notifications for Cork Institute of Technology Mail.   Learn more  Hide
+
+
+More
+
+1 of 157
+
+CSS Backoffice
+Inbox
+x
+Clotilde Hovine
+
+Attachments15:24 (3 minutes ago)
+
+to me
+6 Attachments
+  Preview attachment backofficeAddAdmin.php
+  [PHP]
+  Preview attachment backofficeAddRestaurant.php
+  [PHP]
+  Preview attachment backofficeHomepage.php
+  [PHP]
+  Preview attachment backofficeModifyRestaurant.php
+  [PHP]
+  Preview attachment backofficeModifyUser.php
+  [PHP]
+  Preview attachment backoffice.css
+  [Style Sheet]
+
+Click here to Reply or Forward
+Using 0.08 GB
+           Manage
+           ©2014 Google - Terms of Service - Privacy Policy - Programme Policies
+                                                              Powered by
+                                                              Last account activity: 33 minutes ago
+                                                                                        Details
+
+
+                                                                                        Clotilde Hovine's profile photo
+Clotilde Hovine
+Show details
+Conversation opened. 1 unread message.
+backoffice.css
+
+                       * {margin: 0; padding: 0;}
+
+a {text-decoration: none;}
+
+/* This class is added on scroll */
+.fixed {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    z-index: 1;
+}
+
+body {
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 18px;
+    text-align: center;
+    background-color: #FDE3A7;
+}
+
+/* Font Face Settings */
+@font-face {
+    font-family: 'open-sans-bold';
+    src: url('../fonts/open-sans/OpenSans-Bold.eot');
+    src: url('../fonts/open-sans/OpenSans-Bold.eot?iefix') format('embedded-opentype'),
+    url('../fonts/open-sans/OpenSans-Bold.ttf');
+    font-weight: normal;
+}
+
+/* Navigation Settings */
+
+nav {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+
+nav li {
+    display: inline-block;
+    padding: 24px 10px;
+}
+
+nav li a {
+    color: #757575;
+    text-transform: uppercase;
+}
+
+section {
+    height: 100vph;
+    text-align: center;
+}
+
+/* Screens Settings */
+#screen1 {
+    /*background: #FDE3A7;*/
+}
+
+/*
+*CONTAINER
+*/
+#bouton{
+    margin-top: 45px;
+    text-align: center;
+}
+
+#table{
+    margin-top: 45px;
+    margin-left:40%;
+}
+/*
+*SEARCH BAR
+*/
+
+#search {
+
+}
+
+#search input[type="text"] {
+    background: url(../img/search-white.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+    #search{
+        display: none;
+    }
+
+    .rating {
+        width:60%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    nav li {
+        padding: 24px 4px;
+    }
+
+    nav li a {
+        font-size: 14px;
+    }
+    .rating {
+        width:65%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    nav li a {
+        font-size: 10px;
+    }
+
+    .rating:not(:checked) > label {
+        font-size:100%;
+    }
+
+    .rating {
+        width:70%;
+    }
+}
+
+td, th
+{
+    color:black
+}
