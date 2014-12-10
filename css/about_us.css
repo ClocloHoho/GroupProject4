@@ -11,7 +11,7 @@ body {
 
 #screen1 {	
 	background: #34495E;
-	height:750px;
+	height:910px;
 }
 
 section{
@@ -33,12 +33,12 @@ padding-top:100px;
 }
 
 
-@media only screen and (min-width: 0px) and (max-width: 520px){
+@media only screen and (min-width: 0px) and (max-width: 530px){
 
 
 #screen1 {	
 	background:#34495E;
-	height:1650px;
+	height:1990px;
 }
 
 	.aboutusGirls{
@@ -67,7 +67,7 @@ margin-left:120px;
 
 #screen1 {	
 	background: #34495E;
-	height:1700px;
+	height:1900px;
 	text-align:center;
 }
 
