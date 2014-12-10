@@ -25,7 +25,7 @@
 <section id="screen1">
    <!--div container for each persons "about us"-->
     <div class="aboutusGirls">
-        <img src="girl.jpg" alt="Clotilde" height="100" width="100">
+        <img src="img/clotilde.jpg" alt="Clotilde" height="100" width="100">
       
         <!--div container for name of person"-->
         <div class="name">
@@ -43,7 +43,7 @@
     
     <!--div container for each persons "about us"-->
     <div class="aboutusGirls">
-        <img src="girl.jpg" alt="Sara" height="100" width="100">
+        <img src="img/sara.jpg" alt="Sara" height="100" width="100">
     
         <!--div container for name of person"-->
         <div class="name">    
@@ -60,7 +60,7 @@
     
     <!--div container for each persons "about us"-->
     <div class="aboutusBoys">
-        <img src="girl.jpg" alt="Lucien" height="100" width="100">
+        <img src="img/lucien.jpg" alt="Lucien" height="100" width="100">
         
         <!--div container for name of person"-->
         <div class="name">
@@ -77,7 +77,7 @@
     
     <!--div container for each persons "about us"-->
     <div class="aboutusBoys">
-        <img src="girl.jpg" alt="Rokas" height="100" width="100">
+        <img src="img/rokas.jpg" alt="Rokas" height="100" width="100">
         
         <!--div container for name of person"-->
         <div class = "name">
