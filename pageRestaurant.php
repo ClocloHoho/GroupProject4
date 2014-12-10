@@ -1,3 +1,22 @@
+
+<?php
+if(!isset($_GET["restaurantID"])){
+    header('Location: index.php');
+    die();
+}
+
+$queryGetRestaurant = mysql_query("SELECT * FROM restaurants WHERE restaurantID=".$_GET["restaurantID"]);
+if($query === FALSE) {
+    die(mysql_error());
+}
+$numRows = mysql_num_rows($queryGetRestaurant);
+if ($numRows<1) {
+    header('Location: index.php');
+    die();
+}
+$restaurant=mysql_fetch_assoc($queryGetRestaurant);
+?>
+
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -11,7 +30,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-	<script type='text/javascript' src='http://code.jquery.com/jquery-git.js'></script> 
+	<script type='text/javascript' src='http://code.jquery.com/jquery-git.js'></script>
+    <script src="js/rate.js"></script>
 
 </head>
 
@@ -22,7 +42,7 @@
 			<li><a href="index.php?page=aboutSite">About</a></li>
 			<li><a href="index.php?page=aboutUs">Team</a></li>
 			<li><a href="index.php?page=contactUs">Contact</a></li>
-			<li><a href="#">Logout</a></li>
+			<li><a href="/tools/logout.php">Logout</a></li>
 			<li>
 				<form method="get" action="/search" id="search">
   					<input name="q" type="text" size="40" placeholder="Search..." />
@@ -35,83 +55,97 @@
 
 <div id="container">
 
-<h1>Name of the restaurant</h1>
+    <h1><?php echo($restaurant['name']); ?></h1>
 
-<div id="rating">
-  
-  <div class="rating">
-	<input type="radio" id="star1" name="rating" value="5" /><label for="star1" title="Sucks big time"> </label>
-	<input type="radio" id="star2" name="rating" value="4" /><label for="star2" title="Kinda bad"> </label>
-	<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh"> </label>
-	<input type="radio" id="star4" name="rating" value="2" /><label for="star4" title="Pretty good"> </label>
-    <input type="radio" id="star5" name="rating" value="1" /><label for="star5" title="Rocks!"> </label>
-</div>
-  
-<!--<strong class="choice"> </strong>-->
-</div>
+    <div id="rating">
 
-<script>
-            
-$(':radio').change(
-  function(){
-    $('.choice').text( this.value + ' stars' );
-      var ratingNum = this.value;
-	  console.log(ratingNum);
-      
-  } 
-)
-</script>
+        <div class="rating">
+            <input type="radio" id="star1<?php echo($restaurant['restaurantID']); ?>" name="rating<?php echo($restaurant['restaurantID']); ?>" value="5" <?php if($restaurant['rating']==5){ echo("checked"); } ?>
+                   onclick="rate(5,<?php echo($restaurant['restaurantID']); ?>)"/><label for="star1<?php echo($restaurant['restaurantID']); ?>" title="Sucks big time"> </label>
+            <input type="radio" id="star2<?php echo($restaurant['restaurantID']); ?>" name="rating<?php echo($restaurant['restaurantID']); ?>" value="4" <?php if($restaurant['rating']==4){ echo("checked"); } ?>
+                   onclick="rate(4,<?php echo($restaurant['restaurantID']); ?>)"/><label for="star2<?php echo($restaurant['restaurantID']); ?>" title="Kinda bad"> </label>
+            <input type="radio" id="star3<?php echo($restaurant['restaurantID']); ?>" name="rating<?php echo($restaurant['restaurantID']); ?>" value="3" <?php if($restaurant['rating']==3){ echo("checked"); } ?>
+                   onclick="rate(3,<?php echo($restaurant['restaurantID']); ?>)"/><label for="star3<?php echo($restaurant['restaurantID']); ?>" title="Meh"> </label>
+            <input type="radio" id="star4<?php echo($restaurant['restaurantID']); ?>" name="rating<?php echo($restaurant['restaurantID']); ?>" value="2" <?php if($restaurant['rating']==2){ echo("checked"); } ?>
+                   onclick="rate(2,<?php echo($restaurant['restaurantID']); ?>)"/><label for="star4<?php echo($restaurant['restaurantID']); ?>" title="Pretty good"> </label>
+            <input type="radio" id="star5<?php echo($restaurant['restaurantID']); ?>" name="rating<?php echo($restaurant['restaurantID']); ?>" value="1" <?php if($restaurant['rating']==1){ echo("checked"); } ?>
+                   onclick="rate(1,<?php echo($restaurant['restaurantID']); ?>)"/><label for="star5<?php echo($restaurant['restaurantID']); ?>" title="Rocks!"> </label>
+        </div>
 
-<img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo"/>
+        <!--<strong class="choice"> </strong>-->
+    </div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo" onclick="printNextImage()"/>
 
-<ul class="interactions">
-	<li>
-		<span class="name">Where to find us?</span>
-		<span class="value">*The Google Map*</span>
-	</li>
-	<li>
-		<span class="name">Suggestions ?</span>
-		<span class="value"><a href="index.php?page=contactUs"><img src="img/email.png" alt="Enveloppe"/></a></span>
-	</li>
-</ul>
+    <p><?php echo($restaurant['description']); ?></p>
+
+    <ul class="interactions">
+        <li>
+            <span class="name">Where to find us?</span>
+            <span class="value">
+                <script>
+                    function initialize() {
+                        var myLatlng = new google.maps.LatLng(<?php echo($restaurant['GPSX']);?>, <?php echo($restaurant['GPSY']);?>);
+                        var mapCanvas = document.getElementById('map_canvas');
+                        var mapOptions = {
+                            center: myLatlng,
+                            zoom: 15,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        }
+                        var map = new google.maps.Map(mapCanvas, mapOptions)
+                        var marker = new google.maps.Marker({
+                            position: myLatlng,
+                            map: map,
+                            title: "<?php echo($restaurant['name']); ?>"
+                        });
+                    }
+                    google.maps.event.addDomListener(window, 'load', initialize);
+                </script>
+                <center>
+                    <div id="map_canvas" class="map_canvas"></div>
+                </center>
+            </span>
+        </li>
+        <li>
+            <span class="name">Suggestions ?</span>
+            <span class="value"><a href="index.php?page=contactUs"><img src="img/email.png" alt="Enveloppe"/></a></span>
+        </li>
+    </ul>
 
 </div>
 
 </section>
 
-<section id="rssFeed">
+    <section id="rssFeed">
 
-<div id="feedTitle"><h4>Cork's Most Popular Caffes</h4></div>
+        <div id="feedTitle"><h4>Cork's Most Popular Caffes</h4></div>
 
-<?php
+        <?php
 
-$html = "";
-$url = "http://cork.gaycities.com/restaurants/rss.xml";
+        $html = "";
+        $url = "http://cork.gaycities.com/restaurants/rss.xml";
 
-$xml = simplexml_load_file($url);
-for($i = 0; $i < 7; $i++){
+        $xml = simplexml_load_file($url);
+        for ($i = 0; $i < 7; $i++) {
 
-    if($i==1){
-        $i=$i+3;
-    }
-	
-	$title = $xml->channel->item[$i]->title;
-	$link = $xml->channel->item[$i]->link;
-	$description = $xml->channel->item[$i]->description;
-	$pubDate = $xml->channel->item[$i]->pubDate;
-	$category = $xml->channel->item[$i]->category;
-	
-	$html .= "<a href='$link' id='titleStyleRSS'><h3>$title</h3></a>";
-	$html .= "<div id='descriptionStyleRSS'>$description </div>";
-	$html .= "<div id='pubStyleRSS'>Publication Date:$pubDate<hr />";
-	
-}
-echo $html;
-?>
-</section>
+            if ($i == 1) {
+                $i = $i + 3;
+            }
 
+            $title = $xml->channel->item[$i]->title;
+            $link = $xml->channel->item[$i]->link;
+            $description = $xml->channel->item[$i]->description;
+            $pubDate = $xml->channel->item[$i]->pubDate;
+            $category = $xml->channel->item[$i]->category;
+
+            $html .= "<a href='$link' id='titleStyleRSS'><h3>$title</h3></a>";
+            $html .= "<div id='descriptionStyleRSS'>$description </div>";
+            $html .= "<div id='pubStyleRSS'>Publication Date:$pubDate<hr />";
+
+        }
+        echo $html;
+        ?>
+    </section>
 <footer>
 	<a href="https://twitter.com/eat_in_cork" class="twitter-follow-button" data-show-count="false" data-size="large">
 		Follow @Eat_In_Cork
@@ -135,5 +169,9 @@ echo $html;
 	</script>
 	<div id="terms"><a href="index.php?page=terms">Terms & Conditions</a></div>
 </footer>
+    <script src="js/diaporama.js"></script>
+    <?php if($restaurant[tag]!==""){?>
+        <script>loadInstagram("<?php echo($restaurant[tag]); ?>");</script>
+    <?php } ?>
 </body>
 </html>
