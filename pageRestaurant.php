@@ -44,9 +44,9 @@ $restaurant=mysql_fetch_assoc($queryGetRestaurant);
 			<li><a href="index.php?page=contactUs">Contact</a></li>
 			<li><a href="/tools/logout.php">Logout</a></li>
 			<li>
-				<form method="get" action="/search" id="search">
-  					<input name="q" type="text" size="40" placeholder="Search..." />
-				</form>
+                <form method="post" action="index.php?page=searchPage" id="search">
+                    <input name="search" type="text" size="40" placeholder="Search..." />
+                </form>
 			</li>
 		</ul>
 	</nav>
@@ -75,7 +75,10 @@ $restaurant=mysql_fetch_assoc($queryGetRestaurant);
         <!--<strong class="choice"> </strong>-->
     </div>
 
-    <img src="img/<?php echo($restaurant['restaurantID']); ?>.jpg" alt="Photo Restaurant" id="admin_photo" onclick="printNextImage()"/>
+    <div class="imgDiv">
+        <img src="img/<?php echo($restaurant['restaurantID']); ?>.jpg" alt="Photo Restaurant" id="admin_photo" onclick="printNextImage()"/>
+        <center><button id="nextImageText" onclick="printNextImage()">Next image</button></center>
+    </div>
 
     <p><?php echo($restaurant['description']); ?></p>
 

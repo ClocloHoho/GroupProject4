@@ -41,15 +41,15 @@ section {
 }
 
 /* Screens Settings */
-#screen1 {	
+section:nth-child(3n+1) {
 	background: #43b29d;
 }
 
-#screen2 {
+section:nth-child(3n+2) {
 	background: #efc94d;
 }
 
-#screen3 {
+section:nth-child(3n+0) {
 	background: #e1793d;
 }
 

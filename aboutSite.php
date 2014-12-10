@@ -16,9 +16,9 @@
 			<li><a href="index.php?page=contactUs">Contact</a></li>
 			<li><a href="/tools/logout.php">Logout</a></li>
 			<li>
-				<form method="get" action="/search" id="search">
-  					<input name="q" type="text" size="40" placeholder="Search..." />
-				</form>
+                <form method="post" action="index.php?page=searchPage" id="search">
+                    <input name="search" type="text" size="40" placeholder="Search..." />
+                </form>
 			</li>
 		</ul>
 	</nav> 

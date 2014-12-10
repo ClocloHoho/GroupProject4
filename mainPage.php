@@ -22,8 +22,8 @@ function showRestaurants()
 						<li><a href="index.php?page=contactUs">Contact</a></li>
 						<li><a href="/tools/logout.php">Logout</a></li>
 						<li>
-							<form method="get" action="/search" id="search">
-  								<input name="q" type="text" size="40" placeholder="Search..." />
+							<form method="post" action="index.php?page=searchPage" id="search">
+  								<input name="search" type="text" size="40" placeholder="Search..." />
 							</form>
 						</li>
 					</ul>
@@ -52,9 +52,9 @@ function showRestaurants()
 						</div>
 
 
-<img src="img/<?php echo($row['restaurantID']); ?>.jpg" alt="Photo Restaurant" id="admin_photo"/>
+                        <img src="img/<?php echo($row['restaurantID']); ?>.jpg" alt="Photo Restaurant" id="admin_photo"/>
 
-<p><?php echo($row['description']); ?></p>
+                        <p><?php echo($row['description']); ?></p>
 
                         <ul class="interactions">
                             <!--<li>
@@ -129,7 +129,7 @@ function showRestaurants()
 		Tweet to @eatincork
 	</a> 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	<br></br>
+	</br></br>
 	<div class="fb-follow" data-href="https://www.facebook.com/eatincork" data-width="178px" data-height="28px" data-colorscheme="light" data-layout="button" data-show-faces="true"></div>
 	<div id="fb-root"></div>
 	<script>

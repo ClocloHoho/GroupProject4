@@ -28,6 +28,7 @@ function onDataLoaded(instagram_data) {
         var photos = instagram_data.data;
         //console.log(photos);
         if (photos.length > 0) {
+            document.getElementById('nextImageText').style.display = 'inline';
             for (var key in photos) {
                 var photo = photos[key];
                 images.push(photo.images.standard_resolution.url);

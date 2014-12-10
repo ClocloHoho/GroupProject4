@@ -15,10 +15,10 @@ VALUES
   '$_POST[tag]')";
 
 if (!mysql_query($insert, $dbhandle))
-  {
+{
   die('Error: ' . mysql_error());
-  }
-print_r($_FILES);
+}
+
 $name = $_FILES['image']['name'];
 //returns size of file in kilobytes and max define maximum size for image upload
 $size = $_FILES['image']['size'];
