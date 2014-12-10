@@ -1,4 +1,5 @@
 <?php
+
 function showRestaurants()
 {
     // Retrieve all restaurants in the database
@@ -20,7 +21,7 @@ function showRestaurants()
 						<li><a href="index.php?page=aboutSite">About</a></li>
 						<li><a href="index.php?page=aboutUs">Team</a></li>
 						<li><a href="index.php?page=contactUs">Contact</a></li>
-						<li><a href="/tools/logout.php">Logout</a></li>
+                        <li><a href="/tools/logout.php">Logout</a></li>
 						<li>
 							<form method="post" action="index.php?page=searchPage" id="search">
   								<input name="search" type="text" size="40" placeholder="Search..." />
