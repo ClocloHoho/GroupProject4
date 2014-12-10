@@ -30,7 +30,7 @@ CREATE TABLE `individualratings` (
   `ratingIdRestaurant` int(11) DEFAULT NULL,
   `rating` tinyint(10) DEFAULT NULL,
   PRIMARY KEY (`individualRatingID`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `individualratings` (
 
 LOCK TABLES `individualratings` WRITE;
 /*!40000 ALTER TABLE `individualratings` DISABLE KEYS */;
-INSERT INTO `individualratings` VALUES (1,1,1,2),(2,1,1,2),(3,1,1,2),(4,1,1,2),(5,1,1,4),(6,1,1,5),(7,1,1,2),(8,1,1,4),(9,1,1,4),(10,1,1,5),(11,1,2,5),(12,1,1,2),(13,1,1,4),(14,1,1,3),(15,1,1,1),(16,1,1,5),(17,1,1,1);
+INSERT INTO `individualratings` VALUES (31,12,5,1),(32,13,5,4),(33,12,6,2),(34,13,6,2),(35,12,7,3);
 /*!40000 ALTER TABLE `individualratings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `restaurants` (
   `tag` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`restaurantID`),
   UNIQUE KEY `idrestaurants_UNIQUE` (`restaurantID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `restaurants` (
 
 LOCK TABLES `restaurants` WRITE;
 /*!40000 ALTER TABLE `restaurants` DISABLE KEYS */;
-INSERT INTO `restaurants` VALUES (5,'Liberty grill',51.8977,-8.4781,0,0,0,'At Liberty Grill, we serve brunch, lunch or dinner to our neighbours, fellow Corkonians, and visitors to our wonderful city.',NULL),(6,'Kelly\'s restaurant',51.8971,-8.47395,0,0,0,'Great restaurant, low prices',NULL);
+INSERT INTO `restaurants` VALUES (5,'Liberty grill',51.8977,-8.4781,5,2,3,'At Liberty Grill, we serve brunch, lunch or dinner to our neighbours, fellow Corkonians, and visitors to our wonderful city.','libertygrill'),(6,'Kelly\'s restaurant',51.8971,-8.47395,4,2,2,'Great restaurant, low prices',NULL),(32,'The Bodega',51.9,-8.47674,0,0,0,'The Bodega at St. Peter’s Market is Cork’s most elegant nightclub and restaurant and is an ideal venue for eating out in the city centre, enjoying a couple of drinks and dancing the night away into the early hours.','bodegacorkeats');
 /*!40000 ALTER TABLE `restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +99,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (12,'$2y$10$yXd9nlqJO2A3nX4bdhqFae3tpykxERvujyzfffP0Enc.f02kDpj8a','admin','admin@admin.admin',''),(13,'$2y$10$JtgYDJROuoTgfWukjIXjWOQm6T/rluJJSVhRFn9c04q/gTdAl3sNW','admin2','admin2@admin2',''),(14,'$2y$10$SrbZMI7B/O9UA64fEr7xvuSvWqjAIJoA0meFCCDJws7Au0QOxX6/O','notAdmin','notAdmin@notAdmin','\0'),(15,'$2y$10$gjhpYizV5I7i9THCwV8bQenP7vwlZzNc5q4Hfnq3DRCYSE/dsUiAy','Bob','bob@bob.com','\0'),(16,'$2y$10$cybL5/hwYqMXv6frPTTJmO5UCnS3q9mHjmBlUmhjFrQjqISf6ymlq','admin','admin@admin.admin','\0'),(17,'$2y$10$7GYhKKIk7vRsUVwV35CORelO/9VfX6Uz1dgo/mkF33gb1K9oO5FZm','add','add@add','\0');
+INSERT INTO `users` VALUES (12,'$2y$10$yXd9nlqJO2A3nX4bdhqFae3tpykxERvujyzfffP0Enc.f02kDpj8a','admin','admin@admin.admin',''),(13,'$2y$10$JtgYDJROuoTgfWukjIXjWOQm6T/rluJJSVhRFn9c04q/gTdAl3sNW','admin2','admin2@admin2',''),(14,'$2y$10$SrbZMI7B/O9UA64fEr7xvuSvWqjAIJoA0meFCCDJws7Au0QOxX6/O','notAdmin','notAdmin@notAdmin','\0'),(16,'$2y$10$cybL5/hwYqMXv6frPTTJmO5UCnS3q9mHjmBlUmhjFrQjqISf6ymlq','admin','admin@admin.admin','\0'),(17,'$2y$10$7GYhKKIk7vRsUVwV35CORelO/9VfX6Uz1dgo/mkF33gb1K9oO5FZm','add','add@add','\0');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -112,4 +112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-08 22:14:52
+-- Dump completed on 2014-12-10  2:57:25

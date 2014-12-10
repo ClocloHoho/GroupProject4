@@ -31,7 +31,7 @@ function showRestaurants()
 				
             	<div id="container">
 
-                        <h1><a href="index.php?page=pageRestaurant"><?php echo($row['name']); ?></a></h1>
+                        <h1><a href="index.php?page=pageRestaurant&restaurantID=<?php echo($row['restaurantID']); ?>"><?php echo($row['name']); ?></a></h1>
                         
                         <div id="rating">
   
@@ -52,7 +52,7 @@ function showRestaurants()
 						</div>
 
 
-<img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo"/>
+<img src="img/<?php echo($row['restaurantID']); ?>.jpg" alt="Photo Restaurant" id="admin_photo"/>
 
 <p><?php echo($row['description']); ?></p>
 

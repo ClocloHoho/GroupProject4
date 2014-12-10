@@ -75,7 +75,7 @@ $restaurant=mysql_fetch_assoc($queryGetRestaurant);
         <!--<strong class="choice"> </strong>-->
     </div>
 
-    <img src="img/restaurant1_insta.jpg" alt="Photo Restaurant" id="admin_photo" onclick="printNextImage()"/>
+    <img src="img/<?php echo($restaurant['restaurantID']); ?>.jpg" alt="Photo Restaurant" id="admin_photo" onclick="printNextImage()"/>
 
     <p><?php echo($restaurant['description']); ?></p>
 
