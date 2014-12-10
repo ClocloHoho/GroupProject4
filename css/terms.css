@@ -1,5 +1,5 @@
 body{
-background: #34495e;   
+background: #ffffff;   
 }
 
 *{
@@ -40,11 +40,21 @@ width: 100%;
 max-width: 960px;
 }
 
+#screen1{
+	height: 100%;
+	background-color: #34495e;
+}
+
+/*
+*FOOTER
+*/
 /*
 *FOOTER
 */
 footer{
 	margin-top: 20px;
+	text-align: center;
+	color: #757575;
 }
 
 #terms{
@@ -55,6 +65,7 @@ footer{
 	font-style: none;
 	color: #757575;
 }
+
 
 @media only screen and (max-width: 800px) {
 	#search{display: none;}
